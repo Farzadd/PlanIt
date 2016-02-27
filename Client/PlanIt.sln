@@ -13,6 +13,9 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "PlanIt", "PlanIt\PlanIt\Pla
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		PlanIt\PlanIt\PlanIt.projitems*{44f81221-9e4f-4055-9069-558fa78b2a63}*SharedItemsImports = 4
+		PlanIt\PlanIt\PlanIt.projitems*{e1cb0a94-756b-4a97-b034-0e00e6ab050c}*SharedItemsImports = 4
+		PlanIt\PlanIt\PlanIt.projitems*{8f511d09-7d25-4cc9-9123-39ef078ad06d}*SharedItemsImports = 4
 		PlanIt\PlanIt\PlanIt.projitems*{004b3796-9756-48b5-9b81-c8c5aceec50a}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
