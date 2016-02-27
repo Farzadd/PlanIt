@@ -2,7 +2,7 @@
 
 using UIKit;
 
-namespace Evention.iOS
+namespace PlanIt.iOS
 {
 	public partial class ViewController : UIViewController
 	{

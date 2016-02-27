@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("Evention.Droid.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("PlanIt.Droid.Resource", IsApplication=true)]
 
-namespace Evention.Droid
+namespace PlanIt.Droid
 {
 	
 	

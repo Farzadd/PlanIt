@@ -5,7 +5,7 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-namespace Evention.iOS
+namespace PlanIt.iOS
 {
 	public class Application
 	{

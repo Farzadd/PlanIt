@@ -7,9 +7,9 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
-namespace Evention.Droid
+namespace PlanIt.Droid
 {
-	[Activity (Label = "Evention.Droid", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "PlanIt.Droid", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
 		int count = 1;

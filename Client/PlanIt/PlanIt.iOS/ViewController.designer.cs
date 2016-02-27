@@ -7,7 +7,7 @@ using Foundation;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace Evention.iOS
+namespace PlanIt.iOS
 {
 	[Register ("ViewController")]
 	partial class ViewController

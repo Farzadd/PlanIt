@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Evention
+namespace PlanIt
 {
 	public class MyClass
 	{
