@@ -9,6 +9,7 @@ using Android.OS;
 
 using Microsoft.WindowsAzure.MobileServices;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace PlanIt.Droid
 {
@@ -18,9 +19,11 @@ namespace PlanIt.Droid
         //Mobile Service Client reference
         private MobileServiceClient client;
 
+        const string applicationURL = @"https://planit-server.azurewebsites.net";
+
         public static MobileServiceClient MobileService =
             new MobileServiceClient(
-            "https://planit-server.azurewebsites.net"
+            applicationURL
          );
 
         private MobileServiceUser user;
@@ -65,20 +68,18 @@ namespace PlanIt.Droid
 			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button> (Resource.Id.myButton);
-			
+            CurrentPlatform.Init();
+
+            // Create the Mobile Service Client instance, using the provided
+            // Mobile Service URL
+            client = new MobileServiceClient(applicationURL);
+
             // Sample server code: ****************************************************
             /*
             CurrentPlatform.Init();
             TodoItem item = new TodoItem { Text = "Awesome item" };
             await MobileService.GetTable<TodoItem>().InsertAsync(item);
             */
-
-			button.Click += delegate {
-				button.Text = string.Format ("NaN clicks!");
-			};
 		}
 
         private void CreateAndShowDialog(Exception exception, String title)
