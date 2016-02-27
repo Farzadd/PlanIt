@@ -61,7 +61,7 @@ namespace PlanIt.Droid
 		{
 			
 			// aapt resource value: 0x7f050000
-			public const int myButton = 2131034112;
+			public const int buttonLoginUser = 2131034112;
 			
 			static Id()
 			{
@@ -97,6 +97,9 @@ namespace PlanIt.Droid
 			
 			// aapt resource value: 0x7f040000
 			public const int hello = 2130968576;
+			
+			// aapt resource value: 0x7f040002
+			public const int login_button_text = 2130968578;
 			
 			static String()
 			{
