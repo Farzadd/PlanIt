@@ -44,5 +44,12 @@ namespace PlanIt_ServerService.Controllers
             User current = await InsertAsync(item);
             return CreatedAtRoute("Tables", new { id = current.Id }, current);
         }
+
+        [Route("user/create")]
+        public async Task<IHttpActionResult> CreateUser(User incomingUser)
+        {
+            User current = await InsertAsync(incomingUser);
+            return CreatedAtRoute("Tables", new { id = current.Id }, current);
+        }
     }
 }

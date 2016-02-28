@@ -12,7 +12,7 @@ using Microsoft.Azure.Mobile.Server.Config;
 namespace PlanIt_ServerService.Controllers
 {
     [MobileAppController]
-    public class CreateUserController : ApiController
+    public class TestController : ApiController
     {
         public string Post(User incomingUser)
         {
