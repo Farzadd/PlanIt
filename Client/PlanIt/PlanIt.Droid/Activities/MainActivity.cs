@@ -30,7 +30,7 @@ namespace PlanIt.Droid
 
             CurrentPlatform.Init();
 
-            if (logicMain.IsUserLoggedIn()) {
+            if (!logicMain.IsUserLoggedIn()) {
                 StartActivity(typeof(LoginActivity));
             }     
         }
