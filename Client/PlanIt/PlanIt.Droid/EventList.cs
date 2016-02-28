@@ -51,8 +51,7 @@ namespace PlanIt.Droid
         }
 
         protected async Task<List<Event>> CreateList() {
-            List<Event> eventlistexample = new List<Event>();
-            var x = await Global.mClient
+            List<Event> eventlistexample = await Global.mClient
                  .InvokeApiAsync<List<Event>>("userEvents", System.Net.Http.HttpMethod.Get, null);
 
             Event shayans = new Event();

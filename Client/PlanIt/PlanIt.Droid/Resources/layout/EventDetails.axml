@@ -27,29 +27,37 @@
         android:layout_height="wrap_content"
         android:id="@+id/footer"
         android:layout_alignParentBottom="true"
-        android:background="#ff2979ff">
+        android:background="#ff2979ff"
+        android:layout_marginTop="10dp">
         <RadioGroup
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
             <RadioButton
                 android:id="@+id/radio_going"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#ff2979ff"
-                android:text="Going" />
+                android:text="Going"
+                android:layout_weight="0.33" />
             <RadioButton
                 android:id="@+id/radio_maybe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#ff2979ff"
-                android:text="Maybe" />
+                android:text="Maybe"
+                android:layout_weight="0.33" />
             <RadioButton
                 android:id="@+id/radio_cannot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#ff2979ff"
-                android:text="Can't" />
+                android:text="Not Going"
+                android:layout_weight="0.33" />
         </RadioGroup>
     </LinearLayout>
     <TextView
@@ -57,35 +65,103 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView4" />
-    <TextView
-        android:text="Saman"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView4"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" />
+<!-- Scrollable Item below header and above footer -->
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView5" />
-    <TextView
-        android:text="Mahsan"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/linearLayout1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:text="Farzad"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textView5"
+            android:layout_weight="0.5"
+            android:layout_gravity="left" />
+        <ImageView
+            android:src="@drawable/check_circle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/imageView1"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="40dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView6" />
-    <TextView
-        android:text="Farzad"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/linearLayout1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:text="Mahsan"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textView5"
+            android:layout_weight="0.5"
+            android:layout_gravity="left" />
+        <ImageView
+            android:src="@drawable/check_circle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/imageView1"
+            android:background="@android:color/transparent"
+            android:layout_marginRight="40dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView7" />
-    <TextView
-        android:text="Shayan"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/linearLayout1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:text="Ehsan"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textView5"
+            android:layout_weight="0.5"
+            android:layout_gravity="left" />
+        <ImageView
+            android:src="@drawable/check_circle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/imageView1"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="40dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView8" />
-    <TextView
-        android:text="Farzad"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView9" />
+        android:id="@+id/linearLayout1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:text="Shayan"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textView5"
+            android:layout_weight="0.5"
+            android:layout_gravity="left" />
+        <ImageView
+            android:src="@drawable/check_circle"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/imageView1"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="40dp" />
+    </LinearLayout>
 </LinearLayout>
