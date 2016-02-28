@@ -10,6 +10,8 @@ namespace PlanIt_ServerService.DataObjects
         public string Location { get; set; }
         public string Notes { get; set; }
 
+        public int Status { get; set; }
+
         public virtual User Creator { get; set; }
         public virtual List<User> Invitees { get; set; }
     }
