@@ -1,4 +1,8 @@
 using System;
+using System.Linq;
+using System.Text;
+
+using Java.Util;
 using Android.App;
 using Android.Content;
 using Android.Runtime;
@@ -9,29 +13,58 @@ using System.Collections.Generic;
 
 namespace PlanIt.Droid
 {
-	[Activity (Label = "PlanIt.Droid", MainLauncher = true, Icon = "@drawable/icon")]
-	public class EventList : Activity
-	{
-		List<EventItem> eventItems = new List<EventItem> ();
-		ListView listView;
+    [Activity(Label = "Event List", Icon = "@drawable/icon")]
+    public class EventList : Activity
+    {
+        protected override void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
 
-		protected override void OnCreate (Bundle savedInstanceState)
-		{
-			base.OnCreate (savedInstanceState);
+            SetContentView(Resource.Layout.EventList);
 
-			SetContentView (PlanIt.Droid.Resource.Layout.EventList);
-			listView = FindViewById<ListView> (PlanIt.Droid.Resource.Id.eventList);
+            var eventlistexample = CreateList();
 
-			eventItems.Add (new EventItem () { Color = Android.Graphics.Color.DarkRed,
-				EventName = "Event1", EventLocation = "Richmond" });
-			eventItems.Add (new EventItem () { Color = Android.Graphics.Color.SlateBlue,
-				EventName = "Event2", EventLocation = "Surrey" });
-			eventItems.Add (new EventItem () { Color = Android.Graphics.Color.ForestGreen,
-				EventName = "Event3", EventLocation = "Mission" });
+            var listView = FindViewById<ListView>(PlanIt.Droid.Resource.Id.eventList);
+            List<EventItem> eventItems = new List<EventItem>();
 
-			listView.Adapter = new ColorAdapter (this, eventItems);
-		}
+            listView.Adapter = new ColorAdapter(this, eventItems);
+
+            foreach (Event ev in eventlistexample) {
+                eventItems.Add(new EventItem()
+                {
+                    Color = Android.Graphics.Color.DarkRed,
+                    EventName = ev.Title,
+                    EventLocation = ev.Location
+                });
+            }
+        }
+
+        protected List<Event> CreateList() {
+            List<Event> eventlistexample = new List<Event>();
+
+            Event shayans = new Event();
+            shayans.Location = "Shayan's";
+            shayans.Time = "Feb 2nd 2015";
+            shayans.Title = "Telep at Shayan's";
+
+            Event farzads = new Event();
+            farzads.Location = "Farzad's";
+            farzads.Time = "Feb 8th 2015";
+            farzads.Title = "Telep at Farzad's";
+
+            Event behys = new Event();
+            behys.Location = "Behy's";
+            behys.Time = "March 5th 2016";
+            behys.Title = "Telep at Behy's";
+
+            eventlistexample.Add(shayans);
+            eventlistexample.Add(farzads);
+            eventlistexample.Add(behys);
+
+            return eventlistexample;
+        }
 	}
+
 	public class ColorAdapter : BaseAdapter<EventItem>
 	{
 		List<EventItem> items;

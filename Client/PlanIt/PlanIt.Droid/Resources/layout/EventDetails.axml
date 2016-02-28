@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="Telep"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1" />
+    <TextView
+        android:text="Date: March 8, 2016 @ 4 PM"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2" />
+    <TextView
+        android:text="Location: Fallahi's"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/footer"
+        android:layout_alignParentBottom="true"
+        android:background="#ff2979ff">
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/radio_going"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ff2979ff"
+                android:text="Going" />
+            <RadioButton
+                android:id="@+id/radio_maybe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ff2979ff"
+                android:text="Maybe" />
+            <RadioButton
+                android:id="@+id/radio_cannot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ff2979ff"
+                android:text="Can't" />
+        </RadioGroup>
+    </LinearLayout>
+    <TextView
+        android:text="Attendees:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4" />
+    <TextView
+        android:text="Saman"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5" />
+    <TextView
+        android:text="Mahsan"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView6" />
+    <TextView
+        android:text="Farzad"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7" />
+    <TextView
+        android:text="Shayan"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView8" />
+    <TextView
+        android:text="Farzad"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView9" />
+</LinearLayout>

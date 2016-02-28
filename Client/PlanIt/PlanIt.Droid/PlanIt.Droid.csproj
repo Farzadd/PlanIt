@@ -60,14 +60,27 @@
     <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\monoandroid\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\..\packages\Xamarin.Android.Support.v4.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Basement">
+      <HintPath>..\..\packages\Xamarin.GooglePlayServices.Basement.29.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Basement.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Base">
+      <HintPath>..\..\packages\Xamarin.GooglePlayServices.Base.29.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Maps">
+      <HintPath>..\..\packages\Xamarin.GooglePlayServices.Maps.29.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Maps.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataObjects\User.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EventDetails.cs" />
+    <Compile Include="DataObjects\Event.cs" />
     <Compile Include="EventList.cs" />
-    <Compile Include="CreateEvent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -81,39 +94,37 @@
     <AndroidResource Include="Resources\layout\EventList.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\EventDetails.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\add_user.png" />
     <AndroidResource Include="Resources\drawable-mdpi\add_user.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\add_user.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\add_user.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\add_user.png" />
     <AndroidResource Include="Resources\layout\eventItem.axml" />
-    <AndroidResource Include="Resources\layout\CreateEvent.axml" />
-    <AndroidResource Include="Resources\drawable-hdpi\fwd.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\fwd.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\fwd.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\fwd.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\fwd.png" />
-    <AndroidResource Include="Resources\values\theme.xml" />
-    <AndroidResource Include="Resources\layout\friendsAutoComplete.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\background.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\fb.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\gplus.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\logoNoBorder.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\background.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\fb.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\gplus.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\logoNoBorder.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\background.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\fb.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\gplus.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\logoNoBorder.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\background.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\fb.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\gplus.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\logoNoBorder.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\background.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\fb.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\gplus.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\logoNoBorder.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\values\Strings.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="googleplayservices-maps">
@@ -123,8 +134,14 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\Map_sample_wide.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
     <Content Include="Resources\map_sample.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="..\PlanIt\PlanIt.projitems" Label="Shared" Condition="Exists('..\PlanIt\PlanIt.projitems')" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

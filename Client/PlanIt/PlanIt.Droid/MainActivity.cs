@@ -13,7 +13,7 @@ using System.IO;
 
 namespace PlanIt.Droid
 {
-	[Activity (Label = "PlanIt.Droid", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "PlanIt: Login", Theme="@style/android:Theme.Holo.Light.NoActionBar", Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
         //Mobile Service Client reference
@@ -36,13 +36,13 @@ namespace PlanIt.Droid
                 user = await client.LoginAsync(this,
                     MobileServiceAuthenticationProvider.Facebook);
 
-                
                 User newUser = new User();
+                newUser.Id = "123";
                 newUser.FacebookID = user.UserId;
                 newUser.FacebookName = "CHEESECAKE";
 
                 var result = await client
-                    .InvokeApiAsync<User, string>("user/create", newUser);
+                    .InvokeApiAsync<User, string>("createUser", newUser);
 
                 CreateAndShowDialog(result, user.UserId);
                 
@@ -65,12 +65,24 @@ namespace PlanIt.Droid
             }
         }
 
+		[Java.Interop.Export()]
+		public void openEventList(View view)
+		{
+			StartActivity(typeof(EventList));
+		}
+
+		[Java.Interop.Export()]
+		public void openEventDetail(View view)
+		{
+			StartActivity(typeof(EventDetails));
+		}
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
 			// Set our view from the "main" layout resource
-			SetContentView (Resource.Layout.CreateEvent);
+			SetContentView (Resource.Layout.Main);
 
             CurrentPlatform.Init();
 

@@ -11,11 +11,12 @@ namespace PlanIt_ServerService.Controllers
 {
     public class UserController : TableController<User>
     {
-        static PlanIt_ServerContext context = new PlanIt_ServerContext();
+        PlanIt_ServerContext context;
 
         protected override void Initialize(HttpControllerContext controllerContext)
         {
             base.Initialize(controllerContext);
+            context = new PlanIt_ServerContext();
             
             DomainManager = new EntityDomainManager<User>(context, Request);
         }
