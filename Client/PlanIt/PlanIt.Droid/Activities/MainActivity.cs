@@ -30,8 +30,6 @@ namespace PlanIt.Droid
 
             CurrentPlatform.Init();
 
-            mLoginActivity = new LoginActivity(logicMain);
-
             if (logicMain.IsUserLoggedIn()) {
                 StartActivity(typeof(LoginActivity));
             }     
