@@ -123,6 +123,13 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\gplus.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\logoNoBorder.png" />
     <AndroidResource Include="Resources\layout\CreateEvent.axml" />
+    <AndroidResource Include="Resources\layout\friends_ac.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\forward_white.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\forward_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\forward_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\forward_white.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\forward_white.png" />
+    <AndroidResource Include="Resources\layout\LetsVote.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
