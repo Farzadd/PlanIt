@@ -1,6 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Android.Views;
+
+using Microsoft.WindowsAzure.MobileServices;
+using System.Threading.Tasks;
+using System.IO;
 
 namespace PlanIt
 {
