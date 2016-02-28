@@ -15,7 +15,9 @@ using System.IO;
 
 namespace PlanIt.Droid
 {
-    [Activity(Label = "Event List", Icon = "@drawable/icon")]
+    [Activity(Label = "Event List",
+        Theme = "@style/android:Theme.Holo.Light.NoActionBar",
+        Icon = "@drawable/icon")]
     public class EventList : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -83,7 +85,7 @@ namespace PlanIt.Droid
         [Java.Interop.Export()]
         public void ViewEvent(View view)
         {
-            StartActivity(typeof(EventDetails));
+            StartActivity(typeof(LetsVote));
         }
 	}
 

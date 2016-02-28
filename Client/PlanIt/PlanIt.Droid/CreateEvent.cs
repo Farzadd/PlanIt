@@ -13,7 +13,9 @@ using Android.Widget;
 
 namespace PlanIt.Droid
 {
-	[Activity (Label = "CreateEvent")]			
+    [Activity(Label = "CreateEvent",
+        Theme = "@style/android:Theme.Holo.Light.NoActionBar",
+        Icon = "@drawable/icon")]			
 	public class CreateEvent : Activity
 	{
 		static string[] NAMES = new string[] {
