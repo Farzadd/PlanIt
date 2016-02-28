@@ -13,7 +13,7 @@ using System.IO;
 
 namespace PlanIt.Droid
 {
-	[Activity (Label = "PlanIt: Login", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "PlanIt: Login", MainLauncher = true, Theme="@style/android:Theme.Holo.Light.NoActionBar", Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
         //Mobile Service Client reference
