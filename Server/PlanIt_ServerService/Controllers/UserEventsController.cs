@@ -5,15 +5,25 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using PlanIt_ServerService.DataObjects;
+using PlanIt_ServerService.Models;
+using System.Web.Http.Controllers;
 
 namespace PlanIt_ServerService.Controllers
 {
     public class UserEventsController : ApiController
     {
-        // GET: api/UserEvents
-        public List<EventDTO> Get()
+        PlanIt_ServerContext context;
+
+        protected override void Initialize(HttpControllerContext controllerContext)
         {
-            List<EventDTO> invited = new List<EventDTO>(); //= context.Events.ToList();
+            base.Initialize(controllerContext);
+            context = new PlanIt_ServerContext();
+        }
+
+        // GET: api/UserEvents
+        public List<Event> Get()
+        {
+            List<Event> invited = context.Events.ToList();
             return invited;
         }
     }
