@@ -25,6 +25,7 @@ namespace PlanIt_ServerService.Models
         }
 
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Event> Events { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
