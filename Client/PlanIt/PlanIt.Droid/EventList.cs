@@ -15,7 +15,9 @@ using System.IO;
 
 namespace PlanIt.Droid
 {
-    [Activity(Label = "Event List", Icon = "@drawable/icon")]
+    [Activity(Label = "Event List",
+        Theme = "@style/android:Theme.Holo.Light.NoActionBar",
+        Icon = "@drawable/icon")]
     public class EventList : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -49,7 +51,7 @@ namespace PlanIt.Droid
 
         protected async Task<List<Event>> CreateList() {
             List<Event> eventlistexample = await Global.mClient
-                .InvokeApiAsync<string, List<Event>>("getUserEvents", "");
+                 .InvokeApiAsync<List<Event>>("userEvents", System.Net.Http.HttpMethod.Get, null);
 
             Event shayans = new Event();
             shayans.Location = "Shayan's";
@@ -71,6 +73,18 @@ namespace PlanIt.Droid
             eventlistexample.Add(behys);
 
             return eventlistexample;
+        }
+
+        [Java.Interop.Export()]
+        public void NewEvent(View view)
+        {
+            StartActivity(typeof(CreateEvent));
+        }
+
+        [Java.Interop.Export()]
+        public void ViewEvent(View view)
+        {
+            StartActivity(typeof(LetsVote));
         }
 	}
 

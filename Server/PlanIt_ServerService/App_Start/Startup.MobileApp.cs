@@ -21,6 +21,16 @@ namespace PlanIt_ServerService
             //For more information on Web API tracing, see http://go.microsoft.com/fwlink/?LinkId=620686 
             config.EnableSystemDiagnosticsTracing();
 
+            // Attribute routing.
+            config.MapHttpAttributeRoutes();
+
+            // Convention-based routing.
+            config.Routes.MapHttpRoute(
+                name: "DefaultApi",
+                routeTemplate: "api/{controller}/{id}",
+                defaults: new { id = RouteParameter.Optional }
+            );
+
             new MobileAppConfiguration()
                 .UseDefaultConfiguration()
                 .ApplyTo(config);

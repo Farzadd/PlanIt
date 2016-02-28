@@ -2,18 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Web.Http;
-using System.Web.Http.Controllers;
-using System.Web.Http;
-
 using PlanIt_ServerService.DataObjects;
 using PlanIt_ServerService.Models;
-using Microsoft.Azure.Mobile.Server.Config;
+using System.Web.Http.Controllers;
 
 namespace PlanIt_ServerService.Controllers
 {
-    [MobileAppController]
-    public class GetUserEventsController : ApiController
+    public class UserEventsController : ApiController
     {
         PlanIt_ServerContext context;
 
@@ -21,12 +18,15 @@ namespace PlanIt_ServerService.Controllers
         {
             base.Initialize(controllerContext);
             context = new PlanIt_ServerContext();
-
         }
 
-        public List<Event> Post(string x)
+        // GET: api/UserEvents
+        public List<Event> Get()
         {
             List<Event> invited = context.Events.ToList();
+
+            // TODO: Filter by user
+
             return invited;
         }
     }
