@@ -21,6 +21,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView3" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/footer"
+        android:layout_alignParentBottom="true"
+        android:background="#ff2979ff">
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/radio_going"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ff2979ff"
+                android:text="Going" />
+            <RadioButton
+                android:id="@+id/radio_maybe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ff2979ff"
+                android:text="Maybe" />
+            <RadioButton
+                android:id="@+id/radio_cannot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ff2979ff"
+                android:text="Can't" />
+        </RadioGroup>
+    </LinearLayout>
     <TextView
         android:text="Attendees:"
         android:textAppearance="?android:attr/textAppearanceLarge"
