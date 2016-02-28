@@ -13,7 +13,7 @@ using System.IO;
 
 namespace PlanIt.Droid
 {
-	[Activity (Label = "PlanIt.Droid", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "PlanIt: Login", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
         //Mobile Service Client reference
@@ -41,8 +41,11 @@ namespace PlanIt.Droid
                 newUser.FacebookID = user.UserId;
                 newUser.FacebookName = "CHEESECAKE";
 
+                IMobileServiceTable<User> UserTable = client.GetTable<User>();
+
                 var result = await client
                     .InvokeApiAsync<User, string>("user/create", newUser);
+
 
                 CreateAndShowDialog(result, user.UserId);
                 
