@@ -95,6 +95,7 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\EventDetails.axml" />
+    <AndroidResource Include="Resources\layout\CreateEvent.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\add_user.png" />
     <AndroidResource Include="Resources\drawable-mdpi\add_user.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\add_user.png" />
