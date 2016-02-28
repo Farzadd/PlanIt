@@ -92,8 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\layout\Login.axml" />
-    <AndroidResource Include="Resources\layout\Event.axml" />
     <AndroidResource Include="Resources\layout\addEvent.axml" />
   </ItemGroup>
   <ItemGroup>

@@ -28,6 +28,7 @@ namespace PlanIt.Droid
 
             // Create the Mobile Service Client instance, using the provided
             // Mobile Service URL
+            
             client = new MobileServiceClient(applicationURL);
         }
     }
