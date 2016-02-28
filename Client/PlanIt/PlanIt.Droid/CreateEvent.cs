@@ -14,7 +14,7 @@ using Android.Widget;
 namespace PlanIt.Droid
 {
     [Activity(Label = "CreateEvent",
-        Theme = "@style/android:Theme.Holo.Light.NoActionBar",
+        Theme = "@style/android:Theme.Holo.Light.Dialog.NoActionBar",
         Icon = "@drawable/icon")]			
 	public class CreateEvent : Activity
 	{
@@ -23,7 +23,6 @@ namespace PlanIt.Droid
 		};
 
 		List<EventItem> eventItems = new List<EventItem> ();
-		ListView listView;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -37,6 +36,12 @@ namespace PlanIt.Droid
 
 			textView.Adapter = adapter;
 		}
+
+        [Java.Interop.Export()]
+        public void SaveEvent(View view)
+        {
+            StartActivity(typeof(EventList));
+        }
 	}
 }
 
