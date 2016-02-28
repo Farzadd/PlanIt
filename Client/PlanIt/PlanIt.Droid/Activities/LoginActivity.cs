@@ -33,7 +33,7 @@ namespace PlanIt.Droid
             if (await MainActivity.logicMain.Authenticate())
             {
                 // TODO@Jun: instead of hiding button, switch to main activity
-                FindViewById<Button>(Resource.Id.buttonLoginUser).Visibility = ViewStates.Gone;
+                FindViewById<Button>(Resource.Id.fbLoginUser).Visibility = ViewStates.Gone;
             }
         }
 	}
