@@ -10,6 +10,8 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using System.IO;
 
 namespace PlanIt.Droid
 {
@@ -22,14 +24,20 @@ namespace PlanIt.Droid
 
             SetContentView(Resource.Layout.EventList);
 
-            var eventlistexample = CreateList();
+            PopulateEvents();
+        }
+
+        protected async void PopulateEvents()
+        {
+            var eventlistexample = await CreateList();
 
             var listView = FindViewById<ListView>(PlanIt.Droid.Resource.Id.eventList);
             List<EventItem> eventItems = new List<EventItem>();
 
             listView.Adapter = new ColorAdapter(this, eventItems);
 
-            foreach (Event ev in eventlistexample) {
+            foreach (Event ev in eventlistexample)
+            {
                 eventItems.Add(new EventItem()
                 {
                     Color = Android.Graphics.Color.DarkRed,
@@ -39,8 +47,9 @@ namespace PlanIt.Droid
             }
         }
 
-        protected List<Event> CreateList() {
-            List<Event> eventlistexample = new List<Event>();
+        protected async Task<List<Event>> CreateList() {
+            List<Event> eventlistexample = await Global.mClient
+                .InvokeApiAsync<List<Event>>("getUserEvents", System.Net.Http.HttpMethod.Get, null);
 
             Event shayans = new Event();
             shayans.Location = "Shayan's";
