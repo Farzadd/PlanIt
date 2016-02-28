@@ -25,17 +25,8 @@ namespace PlanIt_ServerService.Controllers
         }
 
         [Route("api/getFieldAgentDisplayName")]
-        public string Post(User incomingUser)
+        public string getFieldAgentDisplayName(User incomingUser)
         {
-            //UserController userController = new UserController();
-            //User existingUser = userController.GetUser(incomingUser.Id).Queryable.ToList()[0];
-
-            //PlanIt_ServerContext context = new PlanIt_ServerContext();
-
-            //IMobileServiceTable<User> UserTable = client.GetTable<User>();
-
-            //await UserTable.InsertAsync(newUser);
-
             User user = context.Users.Find(new[] { incomingUser.Id });
 
             string ret = "";

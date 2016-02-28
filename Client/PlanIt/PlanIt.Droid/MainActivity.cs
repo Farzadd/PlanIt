@@ -45,7 +45,7 @@ namespace PlanIt.Droid
                 newUser.FacebookName = "CHEESECAKE";
 
                 var result = await client
-                    .InvokeApiAsync<User, string>("createUser", newUser);
+                    .InvokeApiAsync<User, string>("getFieldAgentDisplayName", newUser);
 
                 Global.mThisUser = newUser;
 
