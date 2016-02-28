@@ -24,6 +24,7 @@ namespace PlanIt_ServerService.Controllers
 
         }
 
+        [Route("api/getFieldAgentDisplayName")]
         public string Post(User incomingUser)
         {
             //UserController userController = new UserController();

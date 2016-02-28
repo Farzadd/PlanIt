@@ -13,7 +13,7 @@ using System.IO;
 
 namespace PlanIt.Droid
 {
-	[Activity (Label = "PlanIt: Login",
+	[Activity (Label = "PlanIt",
         Theme="@style/android:Theme.Holo.Light.NoActionBar",
         Icon = "@drawable/icon",
         MainLauncher = true)]
