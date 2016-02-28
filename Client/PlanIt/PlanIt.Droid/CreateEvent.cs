@@ -41,7 +41,27 @@ namespace PlanIt.Droid
         [Java.Interop.Export()]
         public void SaveEvent(View view)
         {
+            if (String.IsNullOrEmpty(PlanIt.Droid.Resource.Id.eventName.ToString()))
+            {
+                CreateAndShowDialog("The event name can not be empty. Be creative and give your event a descriptive name!", "No event name");
+                return;
+            }
+
             StartActivity(typeof(EventList));
+        }
+
+        private void CreateAndShowDialog(Exception exception, String title)
+        {
+            CreateAndShowDialog(exception.Message, title);
+        }
+
+        private void CreateAndShowDialog(string message, string title)
+        {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+            builder.SetMessage(message);
+            builder.SetTitle(title);
+            builder.Create().Show();
         }
 	}
 }

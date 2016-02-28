@@ -92,13 +92,6 @@ namespace PlanIt.Droid
             // Create the Mobile Service Client instance, using the provided
             // Mobile Service URL
             Global.mClient = new MobileServiceClient(applicationURL);
-
-            // Sample server code: ****************************************************
-            /*
-            CurrentPlatform.Init();
-            TodoItem item = new TodoItem { Text = "Awesome item" };
-            await MobileService.GetTable<TodoItem>().InsertAsync(item);
-            */
 		}
 
         private void CreateAndShowDialog(Exception exception, String title)
