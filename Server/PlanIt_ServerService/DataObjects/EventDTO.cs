@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace PlanIt_ServerService.DataObjects
 {
-    public class Event : EntityData
+    public class EventDTO : EntityData
     {
         public string Title { get; set; }
         public string Time { get; set; }

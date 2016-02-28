@@ -9,7 +9,7 @@ using PlanIt_ServerService.Models;
 
 namespace PlanIt_ServerService.Controllers
 {
-    public class EventController : TableController<Event>
+    public class EventController : TableController<EventDTO>
     {
         PlanIt_ServerContext context;
 
@@ -17,32 +17,32 @@ namespace PlanIt_ServerService.Controllers
         {
             base.Initialize(controllerContext);
             context = new PlanIt_ServerContext();
-            
-            DomainManager = new EntityDomainManager<Event>(context, Request);
+
+            DomainManager = new EntityDomainManager<EventDTO>(context, Request);
         }
 
         // GET tables/Event
-        public IQueryable<Event> GetAllEvents()
+        public IQueryable<EventDTO> GetAllEvents()
         {
             return Query();
         }
 
         // GET tables/Event/<UnqiueId>
-        public SingleResult<Event> GetEvent(string id)
+        public SingleResult<EventDTO> GetEvent(string id)
         {
             return Lookup(id);
         }
 
         // PATCH tables/Event/<UniqueId>
-        public Task<Event> PatchEvent(string id, Delta<Event> patch)
+        public Task<EventDTO> PatchEvent(string id, Delta<EventDTO> patch)
         {
             return UpdateAsync(id, patch);
         }
 
         // POST tables/Event
-        public async Task<IHttpActionResult> PostEvent(Event item)
+        public async Task<IHttpActionResult> PostEvent(EventDTO item)
         {
-            Event current = await InsertAsync(item);
+            EventDTO current = await InsertAsync(item);
             return CreatedAtRoute("Tables", new { id = current.Id }, current);
         }
     }
