@@ -36,6 +36,7 @@ namespace PlanIt.Droid
                 user = await client.LoginAsync(this,
                     MobileServiceAuthenticationProvider.Facebook);
 
+                /*
                 User newUser = new User();
                 newUser.FacebookID = user.UserId;
                 newUser.FacebookName = "CHEESECAKE";
@@ -47,7 +48,7 @@ namespace PlanIt.Droid
 
                 CreateAndShowDialog(string.Format("you are now logged in - {0}",
                     user.UserId), "Logged in!");
-
+                */
                 success = true;
             }
             catch (Exception ex)
@@ -63,11 +64,7 @@ namespace PlanIt.Droid
             // Load data only after authentication succeeds.
             if (await Authenticate())
             {
-                //Hide the button after authentication succeeds.
-                FindViewById<Button>(Resource.Id.buttonLoginUser).Visibility = ViewStates.Gone;
-
-                // Load the data.
-                //OnRefreshItemsSelected();
+                StartActivity(typeof(EventList));
             }
         }
 
