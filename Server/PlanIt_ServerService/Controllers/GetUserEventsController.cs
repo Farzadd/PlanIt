@@ -28,11 +28,11 @@ namespace PlanIt_ServerService.Controllers
         {
             return x;
         }
-
+        /*
         public List<Event> Post(string x)
         {
             List<Event> invited = new List<Event>();//= context.Events.ToList();
             return invited;
-        }
+        } */
     }
 }
