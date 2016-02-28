@@ -36,16 +36,15 @@ namespace PlanIt.Droid
                 user = await client.LoginAsync(this,
                     MobileServiceAuthenticationProvider.Facebook);
 
-                
                 User newUser = new User();
                 newUser.Id = "123";
                 newUser.FacebookID = user.UserId;
                 newUser.FacebookName = "CHEESECAKE";
 
-                
+                var result = await client
+                    .InvokeApiAsync<User, string>("createUser", newUser);
 
-
-                CreateAndShowDialog("", user.UserId);
+                CreateAndShowDialog(result, user.UserId);
                 
                 success = true;
             }

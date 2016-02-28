@@ -17,12 +17,14 @@ namespace PlanIt_ServerService.Models
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
 
         private const string connectionStringName = "Name=MS_PlanItServer_ConnStr";
+        public string Schema { get; set; }
 
         public PlanIt_ServerContext() : base(connectionStringName)
         {
-        } 
+            //this.Schema = ServiceSettingsDictionary.GetSchemaName();
+        }
 
-        public DbSet<User> Users { get; set; }
+        public virtual DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
