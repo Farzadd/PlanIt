@@ -51,14 +51,14 @@
     <Reference Include="Microsoft.WindowsAzure.Mobile.Ext, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\..\packages\WindowsAzure.MobileServices.1.3.2\lib\monoandroid\Microsoft.WindowsAzure.Mobile.Ext.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\packages\Newtonsoft.Json.8.0.2\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.4\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="System.Net.Http.Primitives">
-      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\monoandroid\System.Net.Http.Primitives.dll</HintPath>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.28\lib\monoandroid\System.Net.Http.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="System.Net.Http.Extensions">
-      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.29\lib\monoandroid\System.Net.Http.Extensions.dll</HintPath>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.28\lib\monoandroid\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -89,6 +89,21 @@
     <AndroidResource Include="Resources\drawable-xhdpi\add_user.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\add_user.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\add_user.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\fb.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\friends.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\fb.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\friends.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\fb.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\friends.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\fb.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\friends.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\fb.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\friends.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\gplus.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\gplus.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\gplus.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\gplus.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\gplus.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />

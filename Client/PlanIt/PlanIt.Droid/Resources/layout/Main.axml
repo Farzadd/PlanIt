@@ -18,7 +18,6 @@
             android:text="PlanIt"
             android:textColor="#ffffff"
             android:textSize="20sp"
-            android:layout_alignParentCenter="true"
             android:layout_centerVertical="true" />
         <ImageButton
             android:layout_width="40dp"

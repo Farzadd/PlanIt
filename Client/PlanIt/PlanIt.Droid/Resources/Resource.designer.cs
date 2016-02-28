@@ -45,6 +45,7 @@ namespace PlanIt.Droid
 		{
 			
 			// aapt resource value: 0x7f020000
+
 			public const int add_user = 2130837504;
 			
 			// aapt resource value: 0x7f020001
@@ -52,6 +53,17 @@ namespace PlanIt.Droid
 			
 			// aapt resource value: 0x7f020002
 			public const int monoandroidsplash = 2130837506;
+
+			public const int fb = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int friends = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int gplus = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int Icon = 2130837507;
 			
 			static Drawable()
 			{
@@ -66,6 +78,7 @@ namespace PlanIt.Droid
 		public partial class Id
 		{
 			
+
 			// aapt resource value: 0x7f060002
 			public const int buttonLoginUser = 2131099650;
 			
@@ -86,6 +99,16 @@ namespace PlanIt.Droid
 			
 			// aapt resource value: 0x7f060000
 			public const int userName = 2131099648;
+
+			// aapt resource value: 0x7f050000
+			public const int fbLoginUser = 2131034112;
+			
+			// aapt resource value: 0x7f050001
+			public const int gpLoginUser = 2131034113;
+			
+			// aapt resource value: 0x7f050002
+			public const int linearLayout1 = 2131034114;
+
 			
 			static Id()
 			{
