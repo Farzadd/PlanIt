@@ -46,7 +46,7 @@ namespace PlanIt.Droid
 
                 Global.mThisUser = newUser;
 
-                CreateAndShowDialog(result, user.UserId);
+                //CreateAndShowDialog(result, user.UserId);
                 
                 success = true;
             }
@@ -84,7 +84,7 @@ namespace PlanIt.Droid
 			base.OnCreate (bundle);
 
 			// Set our view from the "main" layout resource
-			SetContentView (Resource.Layout.EventList);
+			SetContentView (Resource.Layout.Main);
 
             CurrentPlatform.Init();
 
