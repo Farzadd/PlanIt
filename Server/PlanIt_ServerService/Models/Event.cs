@@ -15,6 +15,8 @@ namespace PlanIt_ServerService.Models
             this.Invitees = new HashSet<User>();
         }
 
+        public string Id { get; set; }
+
         public string Title { get; set; }
         public string Time { get; set; }
         public string Location { get; set; }

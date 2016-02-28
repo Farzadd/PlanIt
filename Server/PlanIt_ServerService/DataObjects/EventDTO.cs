@@ -5,6 +5,8 @@ namespace PlanIt_ServerService.DataObjects
 {
     public class EventDTO : EntityData
     {
+        public string Id { get; set; }
+
         public string Title { get; set; }
         public string Time { get; set; }
         public string Location { get; set; }
