@@ -15,8 +15,8 @@ namespace PlanIt_ServerService.Controllers
             return new string[] { "value1", "value2" };
         }
 
-        // GET: api/GetEvents/5
-        [Route("api/GetEventsF")]
+        // GET: api/GetEventsf/5
+        [Route("api/GetEventsf")]
         public string Get(int id)
         {
             return "value";
