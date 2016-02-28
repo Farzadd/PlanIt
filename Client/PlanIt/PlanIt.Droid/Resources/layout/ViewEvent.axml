@@ -33,7 +33,7 @@
             <TextView
                 android:text="Bowling Alley Bazaar"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:id="@+id/textView1"
+                android:id="@+id/titleText"
                 android:paddingLeft="5px"
                 android:paddingRight="5px" />
             <TableRow
@@ -42,7 +42,7 @@
                     android:text="2258 Northwest Drive, Richmond"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:layout_column="0"
-                    android:id="@+id/textView2"
+                    android:id="@+id/locationText"
                     android:paddingLeft="5px"
                     android:paddingRight="5px" />
             </TableRow>
@@ -52,7 +52,7 @@
                     android:text="March 21st, 2016"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:layout_column="0"
-                    android:id="@+id/textView3"
+                    android:id="@+id/timeText"
                     android:paddingLeft="5px"
                     android:paddingRight="5px" />
             </TableRow>
@@ -66,10 +66,10 @@
                 android:minHeight="25px"
                 android:id="@+id/tableRow5">
                 <TextView
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae augue ut urna volutpat posuere a eu odio. Integer sed sapien non arcu luctus pellentesque."
                     android:layout_column="0"
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content" />
+                    android:id="@+id/notesText"
+                    android:layout_width="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae augue ut urna volutpat posuere a eu odio. Integer sed sapien non arcu luctus pellentesque." />
             </TableRow>
             <TableRow
                 android:minWidth="25px"

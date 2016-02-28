@@ -8,22 +8,19 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1"
-        android:layout_marginLeft="10dp" />
+        android:id="@+id/titleText" />
     <TextView
         android:text="Date: March 8, 2016 @ 4 PM"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:layout_marginLeft="10dp" />
+        android:id="@+id/timeText" />
     <TextView
         android:text="Location: Fallahi's"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView3"
-        android:layout_marginLeft="10dp" />
+        android:id="@+id/locationText" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
