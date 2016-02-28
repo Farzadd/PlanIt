@@ -13,7 +13,7 @@ using System.IO;
 
 namespace PlanIt.Droid
 {
-	[Activity (Label = "PlanIt: Login", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "PlanIt: Login", MainLauncher = true, Theme="@style/android:Theme.Holo.Light.NoActionBar", Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
         //Mobile Service Client reference
@@ -65,6 +65,18 @@ namespace PlanIt.Droid
 				StartActivity(typeof(EventList));
             }
         }
+
+		[Java.Interop.Export()]
+		public void openEventList(View view)
+		{
+			StartActivity(typeof(EventList));
+		}
+
+		[Java.Interop.Export()]
+		public void openEventDetail(View view)
+		{
+			StartActivity(typeof(EventDetails));
+		}
 
 		protected override void OnCreate (Bundle bundle)
 		{
