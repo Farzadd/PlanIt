@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace PlanIt.Droid
 {
-	[Activity (Label = "PlanIt", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "PlanIt.Droid", MainLauncher = true, Icon = "@drawable/icon")]
 	public class EventList : Activity
 	{
 		List<EventItem> eventItems = new List<EventItem> ();

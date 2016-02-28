@@ -4,10 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 <!-- Header aligned to top -->
+<!-- Footer aligned to bottom -->
     <RelativeLayout
         android:id="@+id/header"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:background="#ff2979ff"
         android:gravity="center">
@@ -18,18 +19,18 @@
             android:text="PlanIt"
             android:textColor="#ffffff"
             android:textSize="20sp"
-            android:layout_centerVertical="true" />
+            android:layout_centerVertical="true"
+            android:id="@+id/textView1" />
         <ImageButton
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
             android:id="@+id/imageButton"
             android:src="@drawable/add_user"
             android:backgroundTintMode="src_over"
             android:layout_alignParentRight="true"
-            android:layout_margin="5dp"
+            android:layout_margin="10dp"
             android:background="@android:color/transparent" />
     </RelativeLayout>
-<!-- Footer aligned to bottom -->
     <LinearLayout
         android:orientation="horizontal"
         android:minWidth="25px"

@@ -67,6 +67,7 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="EventList.cs" />
+    <Compile Include="CreateEvent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -75,7 +76,7 @@
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\ViewEvent.axml">
-        <SubType>AndroidResource</SubType>
+      <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\EventList.axml">
       <SubType>AndroidResource</SubType>
@@ -86,6 +87,14 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\add_user.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\add_user.png" />
     <AndroidResource Include="Resources\layout\eventItem.axml" />
+    <AndroidResource Include="Resources\layout\CreateEvent.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\fwd.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\fwd.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\fwd.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\fwd.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\fwd.png" />
+    <AndroidResource Include="Resources\values\theme.xml" />
+    <AndroidResource Include="Resources\layout\friendsAutoComplete.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -108,16 +117,13 @@
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="googleplayservices-maps">
-      <Visible>False</Visible>
       <Version>27.0.0.0</Version>
+      <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\Map_sample_wide.png" />
     <Content Include="Resources\map_sample.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\drawable-other\" />
   </ItemGroup>
   <Import Project="..\PlanIt\PlanIt.projitems" Label="Shared" Condition="Exists('..\PlanIt\PlanIt.projitems')" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
