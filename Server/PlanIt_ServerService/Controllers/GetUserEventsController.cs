@@ -24,7 +24,7 @@ namespace PlanIt_ServerService.Controllers
 
         }
 
-        public List<Event> Get()
+        public List<Event> Post(string x)
         {
             List<Event> invited = context.Events.ToList();
             return invited;

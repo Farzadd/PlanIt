@@ -49,7 +49,7 @@ namespace PlanIt.Droid
 
         protected async Task<List<Event>> CreateList() {
             List<Event> eventlistexample = await Global.mClient
-                .InvokeApiAsync<List<Event>>("getUserEvents", System.Net.Http.HttpMethod.Get, null);
+                .InvokeApiAsync<string, List<Event>>("getUserEvents", "");
 
             Event shayans = new Event();
             shayans.Location = "Shayan's";
