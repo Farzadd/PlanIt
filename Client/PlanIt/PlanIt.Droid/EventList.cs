@@ -88,7 +88,7 @@ namespace PlanIt.Droid
             var eventName = view.FindViewById<TextView>(PlanIt.Droid.Resource.Id.eventName).Text;
             Event ev = findEventByName(eventName);
 
-            Intent intent = new Intent(this, typeof(EventDetails));
+            Intent intent = new Intent(this, typeof(ViewEvent));
 
             intent.PutExtra("eventTitle", ev.Title);
             intent.PutExtra("eventTime", ev.Time);

@@ -83,6 +83,7 @@
     <Compile Include="DataObjects\Event.cs" />
     <Compile Include="EventList.cs" />
     <Compile Include="CreateEvent.cs" />
+    <Compile Include="ViewEvent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
