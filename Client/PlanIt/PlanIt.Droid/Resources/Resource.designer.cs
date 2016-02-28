@@ -445,9 +445,6 @@ namespace PlanIt.Droid
 			// aapt resource value: 0x7f07000f
 			public const int imageButton1 = 2131165199;
 			
-			// aapt resource value: 0x7f070039
-			public const int imageView1 = 2131165241;
-			
 			// aapt resource value: 0x7f07000c
 			public const int light = 2131165196;
 			
@@ -462,6 +459,9 @@ namespace PlanIt.Droid
 			
 			// aapt resource value: 0x7f070033
 			public const int logo = 2131165235;
+			
+			// aapt resource value: 0x7f070039
+			public const int map = 2131165241;
 			
 			// aapt resource value: 0x7f070001
 			public const int none = 2131165185;
