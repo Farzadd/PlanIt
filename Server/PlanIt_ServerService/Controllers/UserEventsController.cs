@@ -24,6 +24,9 @@ namespace PlanIt_ServerService.Controllers
         public List<Event> Get()
         {
             List<Event> invited = context.Events.ToList();
+
+            // TODO: Filter by user
+
             return invited;
         }
     }
