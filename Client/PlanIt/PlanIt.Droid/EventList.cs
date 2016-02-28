@@ -21,6 +21,7 @@ namespace PlanIt.Droid
         Icon = "@drawable/icon")]
     public class EventList : Activity
     {
+        List<Event> eventListAll = new List<Event>();
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -32,14 +33,14 @@ namespace PlanIt.Droid
 
         protected async void PopulateEvents()
         {
-            var eventlistexample = await CreateList();
+            eventListAll = await CreateList();
 
             var listView = FindViewById<ListView>(PlanIt.Droid.Resource.Id.eventList);
             List<EventItem> eventItems = new List<EventItem>();
 
             listView.Adapter = new ColorAdapter(this, eventItems);
 
-            foreach (Event ev in eventlistexample)
+            foreach (Event ev in eventListAll)
             {
                 eventItems.Add(new EventItem()
                 {
@@ -85,9 +86,29 @@ namespace PlanIt.Droid
         [Java.Interop.Export()]
         public void ViewEvent(View view)
         {
-            StartActivity(typeof(LetsVote));
+            var eventName = view.FindViewById<TextView>(PlanIt.Droid.Resource.Id.eventName).Text;
+            Event ev = findEventByName(eventName);
+
+            Intent intent = new Intent(this, typeof(ViewEvent));
+
+            intent.PutExtra("eventTitle", ev.Title);
+            intent.PutExtra("eventTime", ev.Time);
+            intent.PutExtra("eventNotes", ev.Notes);
+            intent.PutExtra("eventLocation", ev.Location);
+            intent.PutExtra("eventId", ev.Id);
+
+            StartActivity(intent);
         }
-	}
+
+        private Event findEventByName(string name)
+        {
+            foreach (Event ev in eventListAll) {
+                if (ev.Title == name)
+                    return ev;
+            }
+            return null;
+        }
+    }
 
 	public class ColorAdapter : BaseAdapter<EventItem>
 	{
@@ -130,6 +151,7 @@ namespace PlanIt.Droid
 	{
 		public string EventName { get; set; }
 		public string EventLocation { get; set; }
+        public Event eventDetails { get; set; }
 		public Android.Graphics.Color Color { get; set; }
 	}
 }
