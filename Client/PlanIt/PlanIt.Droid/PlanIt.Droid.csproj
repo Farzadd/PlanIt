@@ -96,6 +96,8 @@
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\ViewEvent.axml">
+        <SubType>AndroidResource</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\EventList.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
