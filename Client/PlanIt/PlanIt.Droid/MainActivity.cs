@@ -46,7 +46,7 @@ namespace PlanIt.Droid
 
                 Global.mThisUser = newUser;
 
-                CreateAndShowDialog(result, user.UserId);
+                //CreateAndShowDialog(result, user.UserId);
                 
                 success = true;
             }
