@@ -16,13 +16,13 @@ namespace PlanIt_ServerService.Models
         // For more information refer to the documentation:
         // http://msdn.microsoft.com/en-us/data/jj591621.aspx
 
-        private const string connectionStringName = "Name=MS_TableConnectionString";
+        private const string connectionStringName = "Name=MS_PlanItServer_ConnStr";
 
         public PlanIt_ServerContext() : base(connectionStringName)
         {
         } 
 
-        public DbSet<TodoItem> TodoItems { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

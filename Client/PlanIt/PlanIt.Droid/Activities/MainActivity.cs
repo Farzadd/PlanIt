@@ -35,6 +35,16 @@ namespace PlanIt.Droid
                 // Sign in with Facebook login using a server-managed flow.
                 user = await client.LoginAsync(this,
                     MobileServiceAuthenticationProvider.Facebook);
+
+                User newUser = new User();
+                newUser.FacebookID = user.UserId;
+                newUser.FacebookName = "CHEESECAKE";
+
+                var result = await client
+                    .InvokeApiAsync<User, string>("createUser", newUser);
+
+                CreateAndShowDialog(result, "FARZ");
+
                 CreateAndShowDialog(string.Format("you are now logged in - {0}",
                     user.UserId), "Logged in!");
 
