@@ -31,7 +31,7 @@ namespace PlanIt.Droid
 			SetContentView (PlanIt.Droid.Resource.Layout.CreateEvent);
 
 			MultiAutoCompleteTextView textView = FindViewById<MultiAutoCompleteTextView> (PlanIt.Droid.Resource.Id.autocompleteNames);
-			var adapter = new ArrayAdapter<String> (this, Resource.Layout.friendsAutoComplete, NAMES);
+			var adapter = new ArrayAdapter<String> (this, PlanIt.Droid.Resource.Layout.friends_ac, NAMES);
 
 			textView.Adapter = adapter;
 		}
