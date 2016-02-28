@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataObjects\User.cs" />
+    <Compile Include="EventList.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,6 +96,7 @@
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\ViewEvent.axml">
+    <AndroidResource Include="Resources\layout\EventList.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>
