@@ -16,6 +16,7 @@ namespace PlanIt_ServerService.Controllers
         }
 
         // GET: api/GetEvents/5
+        [Route("api/GetEventsF")]
         public string Get(int id)
         {
             return "value";
