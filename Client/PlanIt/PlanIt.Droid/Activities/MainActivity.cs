@@ -16,7 +16,7 @@ namespace PlanIt.Droid
 	[Activity (Label = "PlanIt.Droid", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
-        PlanIt.Main logicMain;
+        public static PlanIt.Main logicMain;
         LoginActivity mLoginActivity;
 
         protected override void OnCreate(Bundle bundle)
@@ -33,8 +33,7 @@ namespace PlanIt.Droid
             mLoginActivity = new LoginActivity(logicMain);
 
             if (logicMain.IsUserLoggedIn()) {
-                // TODO@Jun: Fix this
-                // mLoginActivity.OnCreate();
+                StartActivity(typeof(LoginActivity));
             }     
         }
 

@@ -16,13 +16,6 @@ namespace PlanIt.Droid
 	[Activity (Label = "PlanIt.Droid", Theme="@style/android:Theme.Holo.Light.NoActionBar")]
 	public class LoginActivity : Activity
 	{
-        private Main logicMain;
-
-        public LoginActivity(Main logicMain)
-        {
-            this.logicMain = logicMain;
-        }
-
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -37,7 +30,7 @@ namespace PlanIt.Droid
         public async void LoginUser(View view)
         {
             // Load data only after authentication succeeds.
-            if (await logicMain.Authenticate())
+            if (await MainActivity.logicMain.Authenticate())
             {
                 // TODO@Jun: instead of hiding button, switch to main activity
                 FindViewById<Button>(Resource.Id.buttonLoginUser).Visibility = ViewStates.Gone;

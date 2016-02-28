@@ -34,7 +34,7 @@ namespace PlanIt
         }
 
         public bool IsUserLoggedIn() {
-            return true;
+            return false;
         }
 
         private async Task<bool> testMethod() {
