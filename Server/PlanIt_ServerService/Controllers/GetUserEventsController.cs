@@ -23,12 +23,12 @@ namespace PlanIt_ServerService.Controllers
 
         }
 
+        [Route("api/getUserEvents")]
         public string Post(string x)
         {
             return x;
         }
 
-        [Route("api/getUserEvents")]
         public List<Event> Post(string x)
         {
             List<Event> invited = new List<Event>();//= context.Events.ToList();
