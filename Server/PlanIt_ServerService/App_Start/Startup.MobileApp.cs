@@ -53,6 +53,7 @@ namespace PlanIt_ServerService
     {
         protected override void Seed(PlanIt_ServerContext context)
         {
+            /*
             List<TodoItem> todoItems = new List<TodoItem>
             {
                 new TodoItem { Id = Guid.NewGuid().ToString(), Text = "First item", Complete = false },
@@ -64,7 +65,7 @@ namespace PlanIt_ServerService
                 context.Set<TodoItem>().Add(todoItem);
             }
 
-            base.Seed(context);
+            base.Seed(context); */
         }
     }
 }
