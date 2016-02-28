@@ -81,6 +81,7 @@
     <Compile Include="EventDetails.cs" />
     <Compile Include="DataObjects\Event.cs" />
     <Compile Include="EventList.cs" />
+    <Compile Include="CreateEvent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -95,7 +96,6 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\EventDetails.axml" />
-    <AndroidResource Include="Resources\layout\CreateEvent.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\add_user.png" />
     <AndroidResource Include="Resources\drawable-mdpi\add_user.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\add_user.png" />
@@ -122,6 +122,7 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\fb.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\gplus.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\logoNoBorder.png" />
+    <AndroidResource Include="Resources\layout\CreateEvent.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
