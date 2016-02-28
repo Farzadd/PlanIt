@@ -16,7 +16,7 @@ namespace PlanIt_ServerService.Controllers
     {
         public string Post(User incomingUser)
         {
-            //UserController userController = new UserController();
+            UserController userController = new UserController();
             //User existingUser = userController.GetUser(incomingUser.Id).Queryable.ToList()[0];
 
             PlanIt_ServerContext context = new PlanIt_ServerContext();
