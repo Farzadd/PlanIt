@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <ScrollView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView1">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tableLayout1"
+            android:stretchColumns="*"
+            android:paddingBottom="5px"
+            android:paddingEnd="5px"
+            android:paddingRight="5px"
+            android:paddingStart="5px"
+            android:paddingLeft="5px"
+            android:paddingTop="5px">
+            <TableRow
+                android:id="@+id/tableRow1">
+                <ImageView
+                    android:src="@drawable/map_sample_wide"
+                    android:id="@+id/imageView1"
+                    android:layout_height="83.7dp" />
+            </TableRow>
+            <TextView
+                android:text="Bowling Alley Bazaar"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/textView1"
+                android:paddingLeft="5px"
+                android:paddingRight="5px" />
+            <TableRow
+                android:id="@+id/tableRow2">
+                <TextView
+                    android:text="2258 Northwest Drive, Richmond"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_column="0"
+                    android:id="@+id/textView2"
+                    android:paddingLeft="5px"
+                    android:paddingRight="5px" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow3">
+                <TextView
+                    android:text="March 21st, 2016"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_column="0"
+                    android:id="@+id/textView3"
+                    android:paddingLeft="5px"
+                    android:paddingRight="5px" />
+            </TableRow>
+            <TableRow
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/tableRow4">
+            </TableRow>
+            <TableRow
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/tableRow5">
+                <TextView
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vitae augue ut urna volutpat posuere a eu odio. Integer sed sapien non arcu luctus pellentesque."
+                    android:layout_column="0"
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content" />
+            </TableRow>
+            <TableRow
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/tableRow6">
+            </TableRow>
+            <TableRow
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/tableRow7">
+                <TextView
+                    android:text="Invited"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:layout_column="0"
+                    android:id="@+id/textView12" />
+            </TableRow>
+            <TableRow
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/tableRow11">
+                <ListView
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:layout_column="0"
+                    android:id="@+id/listView1" />
+            </TableRow>
+            <TableRow
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/tableRow10">
+            </TableRow>
+            <TableRow
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/tableRow9">
+            </TableRow>
+            <TableRow
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:id="@+id/tableRow8">
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

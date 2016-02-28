@@ -1,20 +1,19 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 using Java.Util;
-
 using Android.App;
 using Android.Content;
-using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.OS;
+using System.Collections.Generic;
 
 namespace PlanIt.Droid
 {
-    [Activity(Label = "EventList")]
+    [Activity(Label = "Event List", Icon = "@drawable/icon")]
     public class EventList : Activity
     {
         protected override void OnCreate(Bundle savedInstanceState)
@@ -25,17 +24,19 @@ namespace PlanIt.Droid
 
             var eventlistexample = CreateList();
 
-            var listView = FindViewById<LinearLayout>(Resource.Id.eventlistlinearLayout);
+            var listView = FindViewById<ListView>(PlanIt.Droid.Resource.Id.eventList);
+            List<EventItem> eventItems = new List<EventItem>();
+
+            listView.Adapter = new ColorAdapter(this, eventItems);
 
             foreach (Event ev in eventlistexample) {
-                listView.AddView(genTextViewForEvent(ev));
+                eventItems.Add(new EventItem()
+                {
+                    Color = Android.Graphics.Color.DarkRed,
+                    EventName = ev.Title,
+                    EventLocation = ev.Location
+                });
             }
-        }
-
-        protected TextView genTextViewForEvent(Event ev) {
-            var view = new TextView(this);
-            view.SetText(ev.Title, TextView.BufferType.Normal);
-            return view;
         }
 
         protected List<Event> CreateList() {
@@ -62,5 +63,49 @@ namespace PlanIt.Droid
 
             return eventlistexample;
         }
-    }
+	}
+
+	public class ColorAdapter : BaseAdapter<EventItem>
+	{
+		List<EventItem> items;
+		Activity context;
+		public ColorAdapter(Activity context, List<EventItem> items)
+			: base()
+		{
+			this.context = context;
+			this.items = items;
+		}
+		public override long GetItemId(int position)
+		{
+			return position;
+		}
+		public override EventItem this[int position]
+		{
+			get { return items[position]; }
+		}
+		public override int Count
+		{
+			get { return items.Count; }
+		}
+		public override View GetView (int position, View convertView, ViewGroup parent)
+		{
+			var item = items[position];
+
+			View view = convertView;
+			if (view == null) // no view to re-use, create new
+				view = context.LayoutInflater.Inflate(PlanIt.Droid.Resource.Layout.eventItem, null);
+			view.FindViewById<TextView>(PlanIt.Droid.Resource.Id.eventName).Text = item.EventName;
+			view.FindViewById<TextView>(PlanIt.Droid.Resource.Id.eventLocation).Text = item.EventLocation;
+			view.FindViewById<ImageButton>(PlanIt.Droid.Resource.Id.eventImageButton).SetBackgroundColor(item.Color);
+
+			return view;
+		}
+	}
+
+	public class EventItem
+	{
+		public string EventName { get; set; }
+		public string EventLocation { get; set; }
+		public Android.Graphics.Color Color { get; set; }
+	}
 }

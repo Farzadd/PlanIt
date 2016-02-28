@@ -13,7 +13,7 @@ using System.IO;
 
 namespace PlanIt.Droid
 {
-	[Activity (Label = "PlanIt.Droid", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "PlanIt: Login", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
         //Mobile Service Client reference
@@ -29,6 +29,8 @@ namespace PlanIt.Droid
         private MobileServiceUser user;
         private async Task<bool> Authenticate()
         {
+            //todo remove
+            return true;
             var success = false;
             try
             {
@@ -36,19 +38,19 @@ namespace PlanIt.Droid
                 user = await client.LoginAsync(this,
                     MobileServiceAuthenticationProvider.Facebook);
 
-                /*
+                
                 User newUser = new User();
                 newUser.FacebookID = user.UserId;
                 newUser.FacebookName = "CHEESECAKE";
 
+                IMobileServiceTable<User> UserTable = client.GetTable<User>();
+
                 var result = await client
-                    .InvokeApiAsync<User, string>("createUser", newUser);
+                    .InvokeApiAsync<User, string>("user/create", newUser);
 
-                CreateAndShowDialog(result, "FARZ");
 
-                CreateAndShowDialog(string.Format("you are now logged in - {0}",
-                    user.UserId), "Logged in!");
-                */
+                CreateAndShowDialog(result, user.UserId);
+                
                 success = true;
             }
             catch (Exception ex)
@@ -64,7 +66,7 @@ namespace PlanIt.Droid
             // Load data only after authentication succeeds.
             if (await Authenticate())
             {
-                StartActivity(typeof(EventList));
+				StartActivity(typeof(EventList));
             }
         }
 
