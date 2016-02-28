@@ -15,6 +15,7 @@ namespace PlanIt.Droid
 {
 	[Activity (Label = "LetsVote",
         Theme="@style/android:Theme.Holo.Light.NoActionBar",
+        ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait,
         Icon = "@drawable/icon")]
 	public class LetsVote : Activity
 	{

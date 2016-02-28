@@ -16,6 +16,7 @@ namespace PlanIt.Droid
 	[Activity (Label = "PlanIt",
         Theme="@style/android:Theme.Holo.Light.NoActionBar",
         Icon = "@drawable/icon",
+        ScreenOrientation=Android.Content.PM.ScreenOrientation.Portrait,
         MainLauncher = true)]
 	public class MainActivity : Activity
 	{

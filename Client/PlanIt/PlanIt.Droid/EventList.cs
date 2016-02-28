@@ -17,6 +17,7 @@ namespace PlanIt.Droid
 {
     [Activity(Label = "Event List",
         Theme = "@style/android:Theme.Holo.Light.NoActionBar",
+        ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait,
         Icon = "@drawable/icon")]
     public class EventList : Activity
     {

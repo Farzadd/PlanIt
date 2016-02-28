@@ -13,7 +13,10 @@ using Android.Widget;
 
 namespace PlanIt.Droid
 {
-	[Activity (Label = "EventDetails")]			
+    [Activity(Label = "EventDetails",
+        Theme = "@style/android:Theme.Holo.Light.Dialog.NoActionBar",
+        ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait,
+        Icon = "@drawable/icon")]			
 	public class EventDetails : Activity
 	{
 		protected override void OnCreate (Bundle savedInstanceState)

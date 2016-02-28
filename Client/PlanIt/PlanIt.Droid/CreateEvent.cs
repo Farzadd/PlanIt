@@ -15,6 +15,7 @@ namespace PlanIt.Droid
 {
     [Activity(Label = "CreateEvent",
         Theme = "@style/android:Theme.Holo.Light.Dialog.NoActionBar",
+        ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait,
         Icon = "@drawable/icon")]			
 	public class CreateEvent : Activity
 	{
