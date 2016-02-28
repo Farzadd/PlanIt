@@ -13,7 +13,9 @@ using Android.Widget;
 
 namespace PlanIt.Droid
 {
-	[Activity (Label = "CreateEvent")]			
+    [Activity(Label = "CreateEvent",
+        Theme = "@style/android:Theme.Holo.Light.NoActionBar",
+        Icon = "@drawable/icon")]			
 	public class CreateEvent : Activity
 	{
 		static string[] NAMES = new string[] {
@@ -31,9 +33,9 @@ namespace PlanIt.Droid
 			SetContentView (PlanIt.Droid.Resource.Layout.CreateEvent);
 
 			MultiAutoCompleteTextView textView = FindViewById<MultiAutoCompleteTextView> (PlanIt.Droid.Resource.Id.autocompleteNames);
-			//var adapter = new ArrayAdapter<String> (this, Resource.Layout.friendsAutoComplete, NAMES);
+			var adapter = new ArrayAdapter<String> (this, PlanIt.Droid.Resource.Layout.friends_ac, NAMES);
 
-			//textView.Adapter = adapter;
+			textView.Adapter = adapter;
 		}
 	}
 }

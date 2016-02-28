@@ -4,7 +4,6 @@ using System.Linq;
 using System.Net;
 using System.Web.Http;
 using System.Web.Http.Controllers;
-using System.Web.Http;
 
 using PlanIt_ServerService.DataObjects;
 using PlanIt_ServerService.Models;
