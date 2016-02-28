@@ -3,6 +3,11 @@ using System.Threading.Tasks;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Android.Views;
+
+using Microsoft.WindowsAzure.MobileServices;
+using System.Threading.Tasks;
+using System.IO;
 
 namespace PlanIt
 {
@@ -42,6 +47,7 @@ namespace PlanIt
                     user.UserId), "Logged in!");
 
                 success = true;
+				SetContentView (Resource.Layout.Main);
             }
             catch (Exception ex)
             {
