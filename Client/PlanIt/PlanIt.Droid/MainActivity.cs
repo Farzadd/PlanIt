@@ -68,6 +68,18 @@ namespace PlanIt.Droid
             }
         }
 
+		[Java.Interop.Export()]
+		public void openEventList(View view)
+		{
+			StartActivity(typeof(EventList));
+		}
+
+		[Java.Interop.Export()]
+		public void openEventDetail(View view)
+		{
+			StartActivity(typeof(EventDetails));
+		}
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);

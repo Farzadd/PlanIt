@@ -11,4 +11,16 @@
         android:layout_height="wrap_content"
         android:onClick="LoginUser"
         android:text="@string/login_button_text" />
+    <Button
+        android:text="Event List"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1"
+        android:onClick="openEventList" />
+    <Button
+        android:text="Event Details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openEventDetail"
+        android:id="@+id/button2" />
 </LinearLayout>
