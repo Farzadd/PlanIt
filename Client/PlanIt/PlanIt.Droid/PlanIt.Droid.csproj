@@ -86,6 +86,26 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\add_user.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\add_user.png" />
     <AndroidResource Include="Resources\layout\eventItem.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\background.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\fb.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\gplus.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\logoNoBorder.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\background.jpg" />
+    <AndroidResource Include="Resources\drawable-mdpi\fb.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\gplus.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\logoNoBorder.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\background.jpg" />
+    <AndroidResource Include="Resources\drawable-xhdpi\fb.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\gplus.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\logoNoBorder.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\background.jpg" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\fb.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\gplus.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\logoNoBorder.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\background.jpg" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\fb.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\gplus.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\logoNoBorder.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -93,8 +113,8 @@
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="googleplayservices-maps">
-      <Visible>False</Visible>
       <Version>27.0.0.0</Version>
+      <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup>
