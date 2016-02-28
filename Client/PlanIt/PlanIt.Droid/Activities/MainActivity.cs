@@ -10,7 +10,6 @@ using Android.OS;
 using Microsoft.WindowsAzure.MobileServices;
 using System.Threading.Tasks;
 using System.IO;
-using PlanIt;
 
 namespace PlanIt.Droid
 {
@@ -29,7 +28,7 @@ namespace PlanIt.Droid
             // Create the Mobile Service Client instance, using the provided
             // Mobile Service URL
             
-            client = new MobileServiceClient(applicationURL);
+            PlanIt.Main.client = new MobileServiceClient(applicationURL);
         }
     }
 }

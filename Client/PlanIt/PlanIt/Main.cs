@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using System.Threading.Tasks;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,16 +9,17 @@ namespace PlanIt
     public class Main
     {
         //Mobile Service Client reference
-        private MobileServiceClient client;
+        public MobileServiceClient client;
 
-        const string applicationURL = @"https://planit-server.azurewebsites.net";
+        public const string applicationURL = @"https://planit-server.azurewebsites.net";
 
         public static MobileServiceClient MobileService =
             new MobileServiceClient(
             applicationURL
          );
 
-        private MobileServiceUser user;
+        public MobileServiceUser user;
+
         private async Task<bool> Authenticate()
         {
             var success = false;
