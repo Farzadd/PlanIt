@@ -13,88 +13,35 @@ using System.IO;
 
 namespace PlanIt.Droid
 {
-	[Activity (Label = "PlanIt.Droid", MainLauncher = true, Theme="@style/android:Theme.Holo.Light.NoActionBar")]
+	[Activity (Label = "PlanIt.Droid", Theme="@style/android:Theme.Holo.Light.NoActionBar")]
 	public class LoginActivity : Activity
 	{
-		private MobileServiceClient client;
+        private Main logicMain;
 
-		const string applicationURL = @"https://planit-server.azurewebsites.net";
+        public LoginActivity(Main logicMain)
+        {
+            this.logicMain = logicMain;
+        }
 
-		public static MobileServiceClient MobileService =
-			new MobileServiceClient(
-				applicationURL
-			);
+        protected override void OnCreate(Bundle bundle)
+        {
+            base.OnCreate(bundle);
 
-		private MobileServiceUser user;
-		private async Task<bool> Authenticate()
-		{
-			var success = false;
-			try
-			{
-				// Sign in with Facebook login using a server-managed flow.
-				user = await client.LoginAsync(this,
-					MobileServiceAuthenticationProvider.Facebook);
-				CreateAndShowDialog(string.Format("you are now logged in - {0}",
-					user.UserId), "Logged in!");
+            // Set our view from the "main" layout resource
+            SetContentView(Resource.Layout.Login);
 
-				success = true;
-				SetContentView (Resource.Layout.Main);
-			}
-			catch (Exception ex)
-			{
-				CreateAndShowDialog(ex, "Authentication failed");
-			}
-			return success;
-		}
+            CurrentPlatform.Init();
+        }
 
-		[Java.Interop.Export()]
-		public async void LoginUser(View view)
-		{
-			// Load data only after authentication succeeds.
-			if (await Authenticate())
-			{
-				//Hide the button after authentication succeeds.
-				FindViewById<Button>(Resource.Id.buttonLoginUser).Visibility = ViewStates.Gone;
-
-				// Load the data.
-				//OnRefreshItemsSelected();
-			}
-		}
-
-		protected override void OnCreate (Bundle bundle)
-		{
-			base.OnCreate (bundle);
-
-			// Set our view from the "main" layout resource
-			SetContentView (Resource.Layout.Login);
-
-			CurrentPlatform.Init();
-
-			// Create the Mobile Service Client instance, using the provided
-			// Mobile Service URL
-			client = new MobileServiceClient(applicationURL);
-
-			//Initializing button from layout
-			//			Button login = FindViewById<Button> (Resource.Id.buttonLoginUser);
-
-			//Login button click action
-			//			login.Click += (object sender, EventArgs e) => {
-			//				Android.Widget.Toast.MakeText(this, "Login Button Clicked!", Android.Widget.ToastLength.Short).Show();
-			//			};
-		}
-
-		private void CreateAndShowDialog(Exception exception, String title)
-		{
-			CreateAndShowDialog(exception.Message, title);
-		}
-
-		private void CreateAndShowDialog(string message, string title)
-		{
-			AlertDialog.Builder builder = new AlertDialog.Builder(this);
-
-			builder.SetMessage(message);
-			builder.SetTitle(title);
-			builder.Create().Show();
-		}
+        [Java.Interop.Export()]
+        public async void LoginUser(View view)
+        {
+            // Load data only after authentication succeeds.
+            if (await logicMain.Authenticate())
+            {
+                // TODO@Jun: instead of hiding button, switch to main activity
+                FindViewById<Button>(Resource.Id.buttonLoginUser).Visibility = ViewStates.Gone;
+            }
+        }
 	}
 }

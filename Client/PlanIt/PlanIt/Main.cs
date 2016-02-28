@@ -3,37 +3,90 @@ using System.Threading.Tasks;
 using System;
 using System.Collections.Generic;
 using System.Text;
-
-
+using PlanIt.Droid;
 
 namespace PlanIt
 {
     public class Main
     {
+/**********     Fields     **************************************************/
+        private const string sApplicationURL = @"https://planit-server.azurewebsites.net";
+
         //Mobile Service Client reference
-        public static MobileServiceClient client;
+        private MobileServiceClient mClient;
 
-        public const string applicationURL = @"https://planit-server.azurewebsites.net";
-
-        public static MobileServiceClient MobileService =
+        private MobileServiceClient mMobileService =
             new MobileServiceClient(
-            applicationURL
+            sApplicationURL
          );
-        public static MobileServiceUser user;
+  
+        private MobileServiceUser mMobileServiceUser;
+        private MainActivity mMainActivity;
 
+/**********     METHODS     **************************************************/
+        public Main(MainActivity mainActivity) {
+            this.mMainActivity = mainActivity;
 
-        /*
-        User newUser = new User();
-        newUser.FacebookID = PlanIt.Main.user.UserId;
-        newUser.FacebookName = "CHEESECAKE";
+            // Create the Mobile Service Client instance, using the provided
+            // Mobile Service URL
 
-        var result = await client
-            .InvokeApiAsync<User, string>("createUser", newUser);
+            this.mClient = new MobileServiceClient(sApplicationURL);
+        }
 
-        CreateAndShowDialog(result, "FARZ");
+        public bool IsUserLoggedIn() {
+            return true;
+        }
 
-        CreateAndShowDialog(string.Format("you are now logged in - {0}",
-            user.UserId), "Logged in!");
-        */
+        private async Task<bool> testMethod() {
+            var success = false;
+            try
+            {
+                User newUser = new User();
+                newUser.FacebookID = this.mMobileServiceUser.UserId;
+                newUser.FacebookName = "CHEESECAKE";
+
+                var result = await this.mClient
+                   .InvokeApiAsync<User, string>("createUser", newUser);
+
+                CreateAndShowDialog(result, "FARZ");
+
+                CreateAndShowDialog(string.Format("you are now logged in - {0}",
+                   mMobileServiceUser.UserId), "Logged in!");
+
+                success = true;
+            }
+            catch (Exception ex)
+            {
+                CreateAndShowDialog(ex, "Test Method Failed");
+            }
+            return success;
+        }
+
+        public async Task<bool> Authenticate()
+        {
+            var success = false;
+            try
+            {
+                // Sign in with Facebook login using a server-managed flow.
+                this.mMobileServiceUser = await mClient.LoginAsync(this.mMainActivity,
+                    MobileServiceAuthenticationProvider.Facebook);
+
+                success = true;
+            }
+            catch (Exception ex)
+            {
+                CreateAndShowDialog(ex, "Authentication failed");
+            }
+            return success;
+        }
+
+        private void CreateAndShowDialog(Exception exception, String title)
+        {
+            mMainActivity.CreateAndShowDialog(exception.Message, title);
+        }
+        private void CreateAndShowDialog(String message, String title)
+        {
+            mMainActivity.CreateAndShowDialog(message, title);
+        }
     }
 }

@@ -16,8 +16,13 @@ namespace PlanIt.Droid
 	[Activity (Label = "PlanIt.Droid", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
+        PlanIt.Main logicMain;
+        LoginActivity mLoginActivity;
+
         protected override void OnCreate(Bundle bundle)
         {
+            logicMain = new Main(this);
+
             base.OnCreate(bundle);
 
             // Set our view from the "main" layout resource
@@ -25,50 +30,15 @@ namespace PlanIt.Droid
 
             CurrentPlatform.Init();
 
-            // Create the Mobile Service Client instance, using the provided
-            // Mobile Service URL
-            
-            PlanIt.Main.client = new MobileServiceClient(PlanIt.Main.applicationURL);
+            mLoginActivity = new LoginActivity(logicMain);
+
+            if (logicMain.IsUserLoggedIn()) {
+                // TODO@Jun: Fix this
+                // mLoginActivity.OnCreate();
+            }     
         }
 
-        private async Task<bool> Authenticate()
-        {
-            var success = false;
-            try
-            {
-                // Sign in with Facebook login using a server-managed flow.
-                PlanIt.Main.user = await PlanIt.Main.client.LoginAsync(this,
-                    MobileServiceAuthenticationProvider.Facebook);
-
-                success = true;
-            }
-            catch (Exception ex)
-            {
-                CreateAndShowDialog(ex, "Authentication failed");
-            }
-            return success;
-        }
-
-        [Java.Interop.Export()]
-        public async void LoginUser(View view)
-        {
-            // Load data only after authentication succeeds.
-            if (await Authenticate())
-            {
-                //Hide the button after authentication succeeds.
-                FindViewById<Button>(Resource.Id.buttonLoginUser).Visibility = ViewStates.Gone;
-
-                // Load the data.
-                //OnRefreshItemsSelected();
-            }
-        }
-
-        private void CreateAndShowDialog(Exception exception, String title)
-        {
-            CreateAndShowDialog(exception.Message, title);
-        }
-
-        private void CreateAndShowDialog(string message, string title)
+        public void CreateAndShowDialog(string message, string title)
         {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
