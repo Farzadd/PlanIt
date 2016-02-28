@@ -19,9 +19,6 @@ namespace PlanIt.Droid
         MainLauncher = true)]
 	public class MainActivity : Activity
 	{
-        //Mobile Service Client reference
-        private MobileServiceClient client;
-
         const string applicationURL = @"https://planit-server.azurewebsites.net";
 
         public static MobileServiceClient MobileService =
@@ -36,7 +33,7 @@ namespace PlanIt.Droid
             try
             {
                 // Sign in with Facebook login using a server-managed flow.
-                user = await client.LoginAsync(this,
+                user = await Global.mClient.LoginAsync(this,
                     MobileServiceAuthenticationProvider.Facebook);
 
                 User newUser = new User();
@@ -44,8 +41,8 @@ namespace PlanIt.Droid
                 newUser.FacebookID = user.UserId;
                 newUser.FacebookName = "CHEESECAKE";
 
-                var result = await client
-                    .InvokeApiAsync<User, string>("getFieldAgentDisplayName", newUser);
+                var result = await Global.mClient
+                    .InvokeApiAsync<User, string>("createUser", newUser);
 
                 Global.mThisUser = newUser;
 
@@ -93,7 +90,7 @@ namespace PlanIt.Droid
 
             // Create the Mobile Service Client instance, using the provided
             // Mobile Service URL
-            client = new MobileServiceClient(applicationURL);
+            Global.mClient = new MobileServiceClient(applicationURL);
 
             // Sample server code: ****************************************************
             /*

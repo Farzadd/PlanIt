@@ -159,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\Startup.MobileApp.cs" />
+    <Compile Include="Controllers\GetUserEventsController.cs" />
     <Compile Include="Controllers\CreateUserController.cs" />
     <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\UserController.cs" />
