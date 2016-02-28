@@ -74,7 +74,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/textView3"
+                android:id="@+id/createEventName"
                 android:textColor="#ff263238"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp" />

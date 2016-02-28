@@ -41,7 +41,7 @@ namespace PlanIt.Droid
         [Java.Interop.Export()]
         public void SaveEvent(View view)
         {
-            if (String.IsNullOrEmpty(PlanIt.Droid.Resource.Id.eventName.ToString()))
+            if (String.IsNullOrEmpty(FindViewById<TextView>(PlanIt.Droid.Resource.Id.createEventName).Text))
             {
                 CreateAndShowDialog("The event name can not be empty. Be creative and give your event a descriptive name!", "No event name");
                 return;

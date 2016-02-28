@@ -73,13 +73,13 @@ namespace PlanIt.Droid
 		{
 			StartActivity(typeof(EventList));
 		}
-
+        /*
 		[Java.Interop.Export()]
 		public void openEventDetail(View view)
 		{
 			StartActivity(typeof(EventDetails));
 		}
-
+        */
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);

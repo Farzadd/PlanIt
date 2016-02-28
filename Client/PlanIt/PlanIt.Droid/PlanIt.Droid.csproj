@@ -79,7 +79,6 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="EventDetails.cs" />
     <Compile Include="DataObjects\Event.cs" />
     <Compile Include="EventList.cs" />
     <Compile Include="CreateEvent.cs" />
@@ -97,7 +96,6 @@
     <AndroidResource Include="Resources\layout\EventList.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\EventDetails.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\add_user.png" />
     <AndroidResource Include="Resources\drawable-mdpi\add_user.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\add_user.png" />
