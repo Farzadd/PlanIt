@@ -10,12 +10,14 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:onClick="ViewEvent"
         android:id="@+id/linearLayout1">
         <ImageButton
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:id="@+id/eventImageButton"
+            android:onClick="ViewEvent"
             android:layout_margin="15dp" />
         <LinearLayout
             android:orientation="vertical"

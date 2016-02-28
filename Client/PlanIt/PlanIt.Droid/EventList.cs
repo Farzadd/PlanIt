@@ -48,8 +48,9 @@ namespace PlanIt.Droid
         }
 
         protected async Task<List<Event>> CreateList() {
-            List<Event> eventlistexample = await Global.mClient
-                .InvokeApiAsync<string, List<Event>>("getUserEvents", "");
+            List<Event> eventlistexample = new List<Event>();
+            //await Global.mClient
+            //     .InvokeApiAsync<string, List<Event>>("getUserEvents", "");
 
             Event shayans = new Event();
             shayans.Location = "Shayan's";
@@ -71,6 +72,18 @@ namespace PlanIt.Droid
             eventlistexample.Add(behys);
 
             return eventlistexample;
+        }
+
+        [Java.Interop.Export()]
+        public void NewEvent(View view)
+        {
+            StartActivity(typeof(CreateEvent));
+        }
+
+        [Java.Interop.Export()]
+        public void ViewEvent(View view)
+        {
+            StartActivity(typeof(EventDetails));
         }
 	}
 

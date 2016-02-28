@@ -4,7 +4,6 @@ using System.Linq;
 using System.Net;
 using System.Web.Http;
 using System.Web.Http.Controllers;
-using System.Web.Http;
 
 using PlanIt_ServerService.DataObjects;
 using PlanIt_ServerService.Models;
@@ -26,7 +25,7 @@ namespace PlanIt_ServerService.Controllers
 
         public List<Event> Post(string x)
         {
-            List<Event> invited = context.Events.ToList();
+            List<Event> invited = new List<Event>();//= context.Events.ToList();
             return invited;
         }
     }
