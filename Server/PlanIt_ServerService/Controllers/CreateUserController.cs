@@ -22,7 +22,7 @@ namespace PlanIt_ServerService.Controllers
             //PlanIt_ServerContext context = new PlanIt_ServerContext();
             
 
-            return incomingUser.FacebookName;
+            return incomingUser.FacebookName + "-1";
         }
     }
 }
