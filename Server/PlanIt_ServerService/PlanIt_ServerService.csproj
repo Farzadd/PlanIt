@@ -160,10 +160,13 @@
   <ItemGroup>
     <Compile Include="App_Start\Startup.MobileApp.cs" />
     <Compile Include="Controllers\CreateUserController.cs" />
+    <Compile Include="Controllers\EventController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="DataObjects\EventDTO.cs" />
     <Compile Include="DataObjects\User.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Event.cs" />
     <Compile Include="Models\PlanIt_ServerContext.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace PlanIt.Droid
 {
-	[Activity (Label = "EventDetails", MainLauncher = true)]			
+	[Activity (Label = "EventDetails")]			
 	public class EventDetails : Activity
 	{
 		protected override void OnCreate (Bundle savedInstanceState)

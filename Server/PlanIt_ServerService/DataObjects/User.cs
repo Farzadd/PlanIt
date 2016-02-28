@@ -6,5 +6,7 @@ namespace PlanIt_ServerService.DataObjects
     {
         public string FacebookID { get; set; }
         public string FacebookName { get; set; }
+
+        public string AuthToken { get; set; }
     }
 }

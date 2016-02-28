@@ -13,7 +13,10 @@ using System.IO;
 
 namespace PlanIt.Droid
 {
-	[Activity (Label = "PlanIt: Login", Theme="@style/android:Theme.Holo.Light.NoActionBar", Icon = "@drawable/icon")]
+	[Activity (Label = "PlanIt",
+        Theme="@style/android:Theme.Holo.Light.NoActionBar",
+        Icon = "@drawable/icon",
+        MainLauncher = true)]
 	public class MainActivity : Activity
 	{
         //Mobile Service Client reference
@@ -42,7 +45,9 @@ namespace PlanIt.Droid
                 newUser.FacebookName = "CHEESECAKE";
 
                 var result = await client
-                    .InvokeApiAsync<User, string>("createUser", newUser);
+                    .InvokeApiAsync<User, string>("getFieldAgentDisplayName", newUser);
+
+                Global.mThisUser = newUser;
 
                 CreateAndShowDialog(result, user.UserId);
                 
