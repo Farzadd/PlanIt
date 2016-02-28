@@ -12,14 +12,14 @@ using Microsoft.Azure.Mobile.Server.Config;
 namespace PlanIt_ServerService.Controllers
 {
     [MobileAppController]
-    public class TestController : ApiController
+    public class CreateUserController : ApiController
     {
         public string Post(User incomingUser)
         {
-            UserController userController = new UserController();
+            //UserController userController = new UserController();
             //User existingUser = userController.GetUser(incomingUser.Id).Queryable.ToList()[0];
 
-            PlanIt_ServerContext context = new PlanIt_ServerContext();
+            //PlanIt_ServerContext context = new PlanIt_ServerContext();
             
 
             return incomingUser.FacebookName;
