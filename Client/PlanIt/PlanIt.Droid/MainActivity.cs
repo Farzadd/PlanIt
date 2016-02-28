@@ -13,7 +13,7 @@ using System.IO;
 
 namespace PlanIt.Droid
 {
-	[Activity (Label = "PlanIt.Droid", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "PlanIt.Droid", Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
         //Mobile Service Client reference
@@ -39,6 +39,7 @@ namespace PlanIt.Droid
                     user.UserId), "Logged in!");
 
                 success = true;
+				SetContentView (Resource.Layout.Main);
             }
             catch (Exception ex)
             {
@@ -66,7 +67,7 @@ namespace PlanIt.Droid
 			base.OnCreate (bundle);
 
 			// Set our view from the "main" layout resource
-			SetContentView (Resource.Layout.Main);
+			SetContentView (Resource.Layout.Login);
 
             CurrentPlatform.Init();
 
