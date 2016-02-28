@@ -74,6 +74,7 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\ViewEvent.axml">
     <AndroidResource Include="Resources\layout\EventList.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
@@ -102,6 +103,19 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="googleplayservices-maps">
+      <Visible>False</Visible>
+      <Version>27.0.0.0</Version>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Map_sample_wide.png" />
+    <Content Include="Resources\map_sample.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable-other\" />
   </ItemGroup>
   <Import Project="..\PlanIt\PlanIt.projitems" Label="Shared" Condition="Exists('..\PlanIt\PlanIt.projitems')" />
   <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

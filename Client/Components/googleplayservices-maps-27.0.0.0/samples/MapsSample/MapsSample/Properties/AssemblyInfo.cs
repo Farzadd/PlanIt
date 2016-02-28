@@ -5,12 +5,12 @@ using Android.App;
 // Information about this assembly is defined by the following attributes.
 // Change them to the values specific to your project.
 
-[assembly: AssemblyTitle ("PlanIt")]
+[assembly: AssemblyTitle ("MapsSample")]
 [assembly: AssemblyDescription ("")]
 [assembly: AssemblyConfiguration ("")]
 [assembly: AssemblyCompany ("")]
 [assembly: AssemblyProduct ("")]
-[assembly: AssemblyCopyright ("joe")]
+[assembly: AssemblyCopyright ("redth")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 
@@ -26,3 +26,5 @@ using Android.App;
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyFile("")]
 
+[assembly: UsesFeature (GLESVersion=0x00020000, Required=true)]
+[assembly: MetaData ("com.google.android.maps.v2.API_KEY", Value="AIzaSyCe9FlFLkAo34iMnxnR23X3g_irRh7ir5E")]
