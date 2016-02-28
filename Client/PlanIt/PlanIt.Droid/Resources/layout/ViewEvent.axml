@@ -23,11 +23,12 @@
             android:paddingLeft="5px"
             android:paddingTop="5px">
             <TableRow
-                android:id="@+id/tableRow1">
-                <ImageView
-                    android:src="@drawable/map_sample_wide"
-                    android:id="@+id/imageView1"
-                    android:layout_height="83.7dp" />
+                android:minHeight="800px">
+                <fragment
+                    android:id="@+id/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    class="com.google.android.gms.maps.MapFragment" />
             </TableRow>
             <TextView
                 android:text="Bowling Alley Bazaar"

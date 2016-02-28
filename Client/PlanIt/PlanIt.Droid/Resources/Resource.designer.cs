@@ -472,14 +472,17 @@ namespace PlanIt.Droid
 			// aapt resource value: 0x7f07003a
 			public const int logo = 2131165242;
 			
+			// aapt resource value: 0x7f07003e
+			public const int map = 2131165246;
+			
 			// aapt resource value: 0x7f070001
 			public const int none = 2131165185;
 			
 			// aapt resource value: 0x7f070002
 			public const int normal = 2131165186;
 			
-			// aapt resource value: 0x7f070040
-			public const int notesText = 2131165248;
+			// aapt resource value: 0x7f070041
+			public const int notesText = 2131165249;
 			
 			// aapt resource value: 0x7f070027
 			public const int radio_cannot = 2131165223;
@@ -508,11 +511,11 @@ namespace PlanIt.Droid
 			// aapt resource value: 0x7f07001f
 			public const int tableRow1 = 2131165215;
 			
-			// aapt resource value: 0x7f070045
-			public const int tableRow10 = 2131165253;
+			// aapt resource value: 0x7f070046
+			public const int tableRow10 = 2131165254;
 			
-			// aapt resource value: 0x7f070044
-			public const int tableRow11 = 2131165252;
+			// aapt resource value: 0x7f070045
+			public const int tableRow11 = 2131165253;
 			
 			// aapt resource value: 0x7f070020
 			public const int tableRow2 = 2131165216;
@@ -520,23 +523,23 @@ namespace PlanIt.Droid
 			// aapt resource value: 0x7f070021
 			public const int tableRow3 = 2131165217;
 			
-			// aapt resource value: 0x7f07003e
-			public const int tableRow4 = 2131165246;
-			
 			// aapt resource value: 0x7f07003f
-			public const int tableRow5 = 2131165247;
+			public const int tableRow4 = 2131165247;
 			
-			// aapt resource value: 0x7f070041
-			public const int tableRow6 = 2131165249;
+			// aapt resource value: 0x7f070040
+			public const int tableRow5 = 2131165248;
 			
 			// aapt resource value: 0x7f070042
-			public const int tableRow7 = 2131165250;
+			public const int tableRow6 = 2131165250;
+			
+			// aapt resource value: 0x7f070043
+			public const int tableRow7 = 2131165251;
+			
+			// aapt resource value: 0x7f070048
+			public const int tableRow8 = 2131165256;
 			
 			// aapt resource value: 0x7f070047
-			public const int tableRow8 = 2131165255;
-			
-			// aapt resource value: 0x7f070046
-			public const int tableRow9 = 2131165254;
+			public const int tableRow9 = 2131165255;
 			
 			// aapt resource value: 0x7f070004
 			public const int terrain = 2131165188;
@@ -544,8 +547,8 @@ namespace PlanIt.Droid
 			// aapt resource value: 0x7f070011
 			public const int textView1 = 2131165201;
 			
-			// aapt resource value: 0x7f070043
-			public const int textView12 = 2131165251;
+			// aapt resource value: 0x7f070044
+			public const int textView12 = 2131165252;
 			
 			// aapt resource value: 0x7f070031
 			public const int textView2 = 2131165233;
