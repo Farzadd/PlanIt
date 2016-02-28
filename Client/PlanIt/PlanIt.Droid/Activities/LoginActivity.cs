@@ -18,6 +18,10 @@ namespace PlanIt.Droid
 	{
         private Main logicMain;
 
+        public LoginActivity()
+        {
+        }
+
         public LoginActivity(Main logicMain)
         {
             this.logicMain = logicMain;

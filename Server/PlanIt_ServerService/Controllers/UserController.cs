@@ -11,7 +11,7 @@ namespace PlanIt_ServerService.Controllers
 {
     public class UserController : TableController<User>
     {
-        PlanIt_ServerContext context = new PlanIt_ServerContext();
+        static PlanIt_ServerContext context = new PlanIt_ServerContext();
 
         protected override void Initialize(HttpControllerContext controllerContext)
         {
