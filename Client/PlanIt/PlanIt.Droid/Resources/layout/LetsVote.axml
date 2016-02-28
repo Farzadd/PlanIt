@@ -7,7 +7,7 @@
 <!-- Footer aligned to bottom -->
     <RelativeLayout
         android:id="@+id/header"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:background="#ff2979ff"
@@ -113,10 +113,12 @@
         <Button
             android:text="Suggest Place"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:id="@+id/button4"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:background="#ff2e7d32"
+            android:textColor="#ffffff" />
         <TextView
             android:text="Suggested Times"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -154,9 +156,11 @@
         <Button
             android:text="Suggest Time"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:id="@+id/button5"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="10dp"
+            android:background="#ff2e7d32"
+            android:textColor="#ffffffff" />
     </LinearLayout>
 </RelativeLayout>
