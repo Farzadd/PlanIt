@@ -29,8 +29,6 @@ namespace PlanIt.Droid
         private MobileServiceUser user;
         private async Task<bool> Authenticate()
         {
-            //todo remove
-            return true;
             var success = false;
             try
             {
