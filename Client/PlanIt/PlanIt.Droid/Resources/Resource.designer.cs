@@ -358,8 +358,8 @@ namespace PlanIt.Droid
 			// aapt resource value: 0x7f070006
 			public const int adjust_width = 2131165190;
 			
-			// aapt resource value: 0x7f070034
-			public const int app_text = 2131165236;
+			// aapt resource value: 0x7f070037
+			public const int app_text = 2131165239;
 			
 			// aapt resource value: 0x7f07000a
 			public const int auto = 2131165194;
@@ -370,35 +370,35 @@ namespace PlanIt.Droid
 			// aapt resource value: 0x7f070017
 			public const int button1 = 2131165207;
 			
-			// aapt resource value: 0x7f070028
-			public const int button2 = 2131165224;
-			
-			// aapt resource value: 0x7f070029
-			public const int button3 = 2131165225;
-			
-			// aapt resource value: 0x7f07002e
-			public const int button4 = 2131165230;
-			
-			// aapt resource value: 0x7f070032
-			public const int button5 = 2131165234;
+			// aapt resource value: 0x7f07002a
+			public const int button2 = 2131165226;
 			
 			// aapt resource value: 0x7f07002b
-			public const int checkBox1 = 2131165227;
-			
-			// aapt resource value: 0x7f07002c
-			public const int checkBox2 = 2131165228;
-			
-			// aapt resource value: 0x7f07002d
-			public const int checkBox3 = 2131165229;
-			
-			// aapt resource value: 0x7f07002f
-			public const int checkBox4 = 2131165231;
-			
-			// aapt resource value: 0x7f070030
-			public const int checkBox5 = 2131165232;
+			public const int button3 = 2131165227;
 			
 			// aapt resource value: 0x7f070031
-			public const int checkBox6 = 2131165233;
+			public const int button4 = 2131165233;
+			
+			// aapt resource value: 0x7f070035
+			public const int button5 = 2131165237;
+			
+			// aapt resource value: 0x7f07002e
+			public const int checkBox1 = 2131165230;
+			
+			// aapt resource value: 0x7f07002f
+			public const int checkBox2 = 2131165231;
+			
+			// aapt resource value: 0x7f070030
+			public const int checkBox3 = 2131165232;
+			
+			// aapt resource value: 0x7f070032
+			public const int checkBox4 = 2131165234;
+			
+			// aapt resource value: 0x7f070033
+			public const int checkBox5 = 2131165235;
+			
+			// aapt resource value: 0x7f070034
+			public const int checkBox6 = 2131165236;
 			
 			// aapt resource value: 0x7f07000b
 			public const int dark = 2131165195;
@@ -409,26 +409,26 @@ namespace PlanIt.Droid
 			// aapt resource value: 0x7f070014
 			public const int editText1 = 2131165204;
 			
-			// aapt resource value: 0x7f070023
-			public const int eventImageButton = 2131165219;
-			
-			// aapt resource value: 0x7f07002a
-			public const int eventList = 2131165226;
-			
-			// aapt resource value: 0x7f070026
-			public const int eventLocation = 2131165222;
-			
 			// aapt resource value: 0x7f070025
-			public const int eventName = 2131165221;
+			public const int eventImageButton = 2131165221;
 			
-			// aapt resource value: 0x7f070035
-			public const int fbLoginUser = 2131165237;
+			// aapt resource value: 0x7f07002c
+			public const int eventList = 2131165228;
+			
+			// aapt resource value: 0x7f070028
+			public const int eventLocation = 2131165224;
+			
+			// aapt resource value: 0x7f070027
+			public const int eventName = 2131165223;
+			
+			// aapt resource value: 0x7f070038
+			public const int fbLoginUser = 2131165240;
 			
 			// aapt resource value: 0x7f070010
 			public const int footer = 2131165200;
 			
-			// aapt resource value: 0x7f070036
-			public const int gpLoginUser = 2131165238;
+			// aapt resource value: 0x7f070039
+			public const int gpLoginUser = 2131165241;
 			
 			// aapt resource value: 0x7f07000d
 			public const int header = 2131165197;
@@ -439,14 +439,14 @@ namespace PlanIt.Droid
 			// aapt resource value: 0x7f070007
 			public const int icon_only = 2131165191;
 			
-			// aapt resource value: 0x7f070027
-			public const int imageButton = 2131165223;
+			// aapt resource value: 0x7f070029
+			public const int imageButton = 2131165225;
 			
 			// aapt resource value: 0x7f07000f
 			public const int imageButton1 = 2131165199;
 			
-			// aapt resource value: 0x7f070039
-			public const int imageView1 = 2131165241;
+			// aapt resource value: 0x7f07003c
+			public const int imageView1 = 2131165244;
 			
 			// aapt resource value: 0x7f07000c
 			public const int light = 2131165196;
@@ -454,14 +454,17 @@ namespace PlanIt.Droid
 			// aapt resource value: 0x7f070012
 			public const int linearLayout1 = 2131165202;
 			
-			// aapt resource value: 0x7f070024
-			public const int linearLayout2 = 2131165220;
+			// aapt resource value: 0x7f070026
+			public const int linearLayout2 = 2131165222;
 			
 			// aapt resource value: 0x7f070016
 			public const int listView1 = 2131165206;
 			
-			// aapt resource value: 0x7f070033
-			public const int logo = 2131165235;
+			// aapt resource value: 0x7f07001e
+			public const int locationText = 2131165214;
+			
+			// aapt resource value: 0x7f070036
+			public const int logo = 2131165238;
 			
 			// aapt resource value: 0x7f070001
 			public const int none = 2131165185;
@@ -469,14 +472,14 @@ namespace PlanIt.Droid
 			// aapt resource value: 0x7f070002
 			public const int normal = 2131165186;
 			
+			// aapt resource value: 0x7f070021
+			public const int radio_cannot = 2131165217;
+			
 			// aapt resource value: 0x7f07001f
-			public const int radio_cannot = 2131165215;
+			public const int radio_going = 2131165215;
 			
-			// aapt resource value: 0x7f07001d
-			public const int radio_going = 2131165213;
-			
-			// aapt resource value: 0x7f07001e
-			public const int radio_maybe = 2131165214;
+			// aapt resource value: 0x7f070020
+			public const int radio_maybe = 2131165216;
 			
 			// aapt resource value: 0x7f070003
 			public const int satellite = 2131165187;
@@ -487,41 +490,41 @@ namespace PlanIt.Droid
 			// aapt resource value: 0x7f070008
 			public const int standard = 2131165192;
 			
-			// aapt resource value: 0x7f070037
-			public const int tableLayout1 = 2131165239;
-			
-			// aapt resource value: 0x7f070038
-			public const int tableRow1 = 2131165240;
-			
-			// aapt resource value: 0x7f070042
-			public const int tableRow10 = 2131165250;
-			
-			// aapt resource value: 0x7f070041
-			public const int tableRow11 = 2131165249;
-			
 			// aapt resource value: 0x7f07003a
-			public const int tableRow2 = 2131165242;
+			public const int tableLayout1 = 2131165242;
 			
 			// aapt resource value: 0x7f07003b
-			public const int tableRow3 = 2131165243;
+			public const int tableRow1 = 2131165243;
 			
-			// aapt resource value: 0x7f07003c
-			public const int tableRow4 = 2131165244;
-			
-			// aapt resource value: 0x7f07003d
-			public const int tableRow5 = 2131165245;
-			
-			// aapt resource value: 0x7f07003e
-			public const int tableRow6 = 2131165246;
-			
-			// aapt resource value: 0x7f07003f
-			public const int tableRow7 = 2131165247;
+			// aapt resource value: 0x7f070045
+			public const int tableRow10 = 2131165253;
 			
 			// aapt resource value: 0x7f070044
-			public const int tableRow8 = 2131165252;
+			public const int tableRow11 = 2131165252;
 			
-			// aapt resource value: 0x7f070043
-			public const int tableRow9 = 2131165251;
+			// aapt resource value: 0x7f07003d
+			public const int tableRow2 = 2131165245;
+			
+			// aapt resource value: 0x7f07003e
+			public const int tableRow3 = 2131165246;
+			
+			// aapt resource value: 0x7f07003f
+			public const int tableRow4 = 2131165247;
+			
+			// aapt resource value: 0x7f070040
+			public const int tableRow5 = 2131165248;
+			
+			// aapt resource value: 0x7f070041
+			public const int tableRow6 = 2131165249;
+			
+			// aapt resource value: 0x7f070042
+			public const int tableRow7 = 2131165250;
+			
+			// aapt resource value: 0x7f070047
+			public const int tableRow8 = 2131165255;
+			
+			// aapt resource value: 0x7f070046
+			public const int tableRow9 = 2131165254;
 			
 			// aapt resource value: 0x7f070004
 			public const int terrain = 2131165188;
@@ -529,11 +532,11 @@ namespace PlanIt.Droid
 			// aapt resource value: 0x7f07000e
 			public const int textView1 = 2131165198;
 			
-			// aapt resource value: 0x7f070040
-			public const int textView12 = 2131165248;
+			// aapt resource value: 0x7f070043
+			public const int textView12 = 2131165251;
 			
-			// aapt resource value: 0x7f07001c
-			public const int textView2 = 2131165212;
+			// aapt resource value: 0x7f07002d
+			public const int textView2 = 2131165229;
 			
 			// aapt resource value: 0x7f070013
 			public const int textView3 = 2131165203;
@@ -547,14 +550,20 @@ namespace PlanIt.Droid
 			// aapt resource value: 0x7f07001a
 			public const int textView6 = 2131165210;
 			
-			// aapt resource value: 0x7f070020
-			public const int textView7 = 2131165216;
-			
-			// aapt resource value: 0x7f070021
-			public const int textView8 = 2131165217;
-			
 			// aapt resource value: 0x7f070022
-			public const int textView9 = 2131165218;
+			public const int textView7 = 2131165218;
+			
+			// aapt resource value: 0x7f070023
+			public const int textView8 = 2131165219;
+			
+			// aapt resource value: 0x7f070024
+			public const int textView9 = 2131165220;
+			
+			// aapt resource value: 0x7f07001d
+			public const int timeText = 2131165213;
+			
+			// aapt resource value: 0x7f07001c
+			public const int titleText = 2131165212;
 			
 			// aapt resource value: 0x7f070009
 			public const int wide = 2131165193;

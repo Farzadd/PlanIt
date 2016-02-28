@@ -32,7 +32,12 @@ namespace PlanIt.Droid
 			radio_going.Click += RadioButtonClick;
 			radio_maybe.Click += RadioButtonClick;
 			radio_cannot.Click += RadioButtonClick;
-		}
+
+            FindViewById<TextView>(Resource.Id.titleText).Text = this.Intent.Extras.GetString("eventTitle");
+            FindViewById<TextView>(Resource.Id.locationText).Text = this.Intent.Extras.GetString("eventLocation");
+            FindViewById<TextView>(Resource.Id.timeText).Text = this.Intent.Extras.GetString("eventTime");
+            //FindViewById<TextView>(Resource.Id.note).Text = this.Intent.Extras.GetString("eventNotes");
+        }
 
 		private void RadioButtonClick (object sender, EventArgs e)
 		{
