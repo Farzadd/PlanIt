@@ -11,10 +11,12 @@ namespace PlanIt_ServerService.Controllers
 {
     public class UserController : TableController<User>
     {
+        static PlanIt_ServerContext context = new PlanIt_ServerContext();
+
         protected override void Initialize(HttpControllerContext controllerContext)
         {
             base.Initialize(controllerContext);
-            PlanIt_ServerContext context = new PlanIt_ServerContext();
+            
             DomainManager = new EntityDomainManager<User>(context, Request);
         }
 
@@ -40,6 +42,13 @@ namespace PlanIt_ServerService.Controllers
         public async Task<IHttpActionResult> PostUser(User item)
         {
             User current = await InsertAsync(item);
+            return CreatedAtRoute("Tables", new { id = current.Id }, current);
+        }
+
+        [Route("user/create")]
+        public async Task<IHttpActionResult> CreateUser(User incomingUser)
+        {
+            User current = await InsertAsync(incomingUser);
             return CreatedAtRoute("Tables", new { id = current.Id }, current);
         }
     }
