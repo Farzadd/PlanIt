@@ -130,6 +130,7 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\forward_white.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\forward_white.png" />
     <AndroidResource Include="Resources\layout\LetsVote.axml" />
+    <AndroidResource Include="Resources\layout\EventCalendar.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
