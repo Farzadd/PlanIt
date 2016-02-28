@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
+using System.Web.Http;
+using System.Web.Http.Controllers;
 using System.Web.Http;
 
 using PlanIt_ServerService.DataObjects;
@@ -14,13 +15,27 @@ namespace PlanIt_ServerService.Controllers
     [MobileAppController]
     public class CreateUserController : ApiController
     {
+        PlanIt_ServerContext context;
+
+        protected override void Initialize(HttpControllerContext controllerContext)
+        {
+            base.Initialize(controllerContext);
+            context = new PlanIt_ServerContext();
+
+        }
+
         public string Post(User incomingUser)
         {
             //UserController userController = new UserController();
             //User existingUser = userController.GetUser(incomingUser.Id).Queryable.ToList()[0];
 
             //PlanIt_ServerContext context = new PlanIt_ServerContext();
-            
+
+            //IMobileServiceTable<User> UserTable = client.GetTable<User>();
+
+            //await UserTable.InsertAsync(newUser);
+
+            context.Users.Find(new[] { incomingUser.Id });
 
             return incomingUser.FacebookName + "-1";
         }

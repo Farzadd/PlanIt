@@ -38,16 +38,14 @@ namespace PlanIt.Droid
 
                 
                 User newUser = new User();
+                newUser.Id = "123";
                 newUser.FacebookID = user.UserId;
                 newUser.FacebookName = "CHEESECAKE";
 
-                IMobileServiceTable<User> UserTable = client.GetTable<User>();
-
-                var result = await client
-                    .InvokeApiAsync<User, string>("user/create", newUser);
+                
 
 
-                CreateAndShowDialog(result, user.UserId);
+                CreateAndShowDialog("", user.UserId);
                 
                 success = true;
             }
