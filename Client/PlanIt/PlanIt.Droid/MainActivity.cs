@@ -61,7 +61,7 @@ namespace PlanIt.Droid
             // Load data only after authentication succeeds.
             if (await Authenticate())
             {
-                StartActivity(typeof(EventList));
+				StartActivity(typeof(EventList));
             }
         }
 
