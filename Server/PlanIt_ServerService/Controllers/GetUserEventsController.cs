@@ -23,6 +23,11 @@ namespace PlanIt_ServerService.Controllers
 
         }
 
+        public string Post(string x)
+        {
+            return x;
+        }
+
         [Route("api/getUserEvents")]
         public List<Event> Post(string x)
         {
