@@ -44,6 +44,8 @@ namespace PlanIt.Droid
                 var result = await client
                     .InvokeApiAsync<User, string>("createUser", newUser);
 
+                Global.mThisUser = newUser;
+
                 CreateAndShowDialog(result, user.UserId);
                 
                 success = true;
