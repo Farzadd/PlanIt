@@ -35,9 +35,13 @@ namespace PlanIt_ServerService.Controllers
 
             //await UserTable.InsertAsync(newUser);
 
-            context.Users.Find(new[] { incomingUser.Id });
+            User user = context.Users.Find(new[] { incomingUser.Id });
 
-            return incomingUser.FacebookName + "-1";
+            string ret = "";
+            if (user != null)
+                ret = user.FacebookName;
+
+            return incomingUser.FacebookName + "-" + ret;
         }
     }
 }
